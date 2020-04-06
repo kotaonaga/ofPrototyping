@@ -82,6 +82,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Debug"
+      customArchiveName = "lightDance"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
