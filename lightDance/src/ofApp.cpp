@@ -2,7 +2,7 @@
 
 void ofApp::setup(){
     gui.setup();
-    gui.add(rSlider.setup("radius", 100.0, 100.0, 300.0) );
+    gui.add(rSlider.setup("radius", 50.0, 50.0, 300.0) );
     gui.add(backGroundSlider.setup("background color", 0, 0, 255) );
     gui.add(uiPosition.set("position", ofVec3f(0,0,0), ofVec3f(-300,-300,-300), ofVec3f(300,300,300)));
     //色系
