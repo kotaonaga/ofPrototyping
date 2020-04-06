@@ -1,6 +1,5 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
     gui.setup();
     gui.add(rSlider.setup("radius", 100.0, 100.0, 300.0) );
@@ -25,9 +24,6 @@ void ofApp::setup(){
     
     for(int i = 0; i < lightNum; i++){
         startPos[i] = 360/lightNum * i;
-        cout << i << "number: " << startPos[i] << endl;
-        cout << i << "cos: " << cos(startPos[i]) << endl;
-        cout << i << "sin: " << sin(startPos[i]) << endl;
     }
 }
 
@@ -47,7 +43,6 @@ void ofApp::update(){
     
 }
 
-//--------------------------------------------------------------
 void ofApp::draw(){
     glDisable(GL_LIGHTING);
     glDisable(GL_DEPTH_TEST);

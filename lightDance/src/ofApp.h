@@ -31,11 +31,10 @@ class ofApp : public ofBaseApp{
     
     
     ofEasyCam cam;
+    
     ofLight light1;
     ofLight light2;
-    
     ofLight lights[lightNum];
-    
     ofColor lightColor;
     float colorHue;
     
