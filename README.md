@@ -23,18 +23,20 @@ openFrameworksで作った習作・プロトタイプたちです。
 
 ## parameterSquare
 パラメータをいじることで無数の正方形が描くパターンを変化させる。  
-[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/parameterSquere)
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/parameterSquare)
 
 [![](https://img.youtube.com/vi/zQZXegGIKbs/0.jpg)](https://www.youtube.com/watch?v=zQZXegGIKbs)
 
 ## rectMonster
-パラメータをいじって、回転する長方形が作り出す光を愛でます。
+パラメータをいじって、回転する長方形が作り出す光を愛でます。  
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/rectMonster)
 
 [![](https://img.youtube.com/vi/4tr_sFikfsE/0.jpg)](https://www.youtube.com/watch?v=4tr_sFikfsE)
 
 
 ## spherePiano
-遠くから見たり、入り込めたりする楽器。
+遠くから見たり、入り込めたりする楽器。  
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/spherePiano)
 
 [![](https://img.youtube.com/vi/fO4TJBVEPok/0.jpg)](https://www.youtube.com/watch?v=fO4TJBVEPok)
 
