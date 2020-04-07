@@ -4,7 +4,7 @@
 void ofApp::setup(){
     ofEnableBlendMode(OF_BLENDMODE_ADD);
     ofRectMode(OF_RECTMODE_CORNER);
-    
+    ofSetFrameRate(90);
     gui.setup();
     gui.add(bgSlider.setup("background", 0, 0, 255));
     gui.add(scaleSlider.setup("scale",4, 4, 20));
@@ -22,7 +22,6 @@ void ofApp::draw(){
     
     ofPushMatrix();
     ofBackground(bgSlider);
-    
     ofRotateZ(glm::radians(count * 3.0));
     ofRotateX(glm::radians(count * 5.0));
     ofRotateY(glm::radians(count * 5.0));
@@ -35,19 +34,16 @@ void ofApp::draw(){
                 ofSetColor(x, y, z, 80);
                 
                 float r = ofRandom(10);
-                ofRotateX(glm::radians(count * x * 3 * ofNoise(r)));
-                ofRotateX(glm::radians(count * x * 3 * ofNoise(r)));
-                ofRotateX(glm::radians(count * x * 3 * ofNoise(r)));
-                ofDrawRectangle(0, 0, 500 * ofNoise(r) * 2, 500 * ofNoise(r) * 3);
+                ofRotateX(glm::radians(count * x));
+                ofRotateY(glm::radians(count * y));
+                ofRotateZ(glm::radians(count * z));
+                ofDrawRectangle(0, 0, 500, 500);
                 ofPopMatrix();
             }
         }
     }
     ofPopMatrix();
-    
-    
     cam.end();
-    
     gui.draw();
 }
 
