@@ -22,6 +22,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    int numberChanger(int _num);
+    
     ofxPanel gui;
     ofxIntSlider bgSlider;
     ofxIntSlider scaleSlider;
