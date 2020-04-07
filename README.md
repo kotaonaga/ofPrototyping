@@ -5,7 +5,7 @@ openFrameworksで作った習作・プロトタイプたちです。
 ## colorChanging
 時間とともに色が移り変わる寒天
 
-[![](https://img.youtube.com/vi/iuiBFPMbNlI/0.jpg)](https://www.youtube.com/watch?v=iuiBFPMbNlI)
+[![](https://img.youtube.com/vi/DrhMItWQLTw&feature=youtu.be/0.jpg)](https://www.youtube.com/watch?v=DrhMItWQLTw&feature=youtu.be)
 
 ## daySphere
 円と色だけで1日の流れを表現しました。
