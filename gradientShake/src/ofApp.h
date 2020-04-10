@@ -27,7 +27,6 @@ class ofApp : public ofBaseApp{
     ofxPanel gui;
     ofxIntSlider radius;
     ofxIntSlider hue[circleNum];
-    
     Circle circles[circleNum];
     int angle;
     int startPos[4] = {0, 10, 20, 30};

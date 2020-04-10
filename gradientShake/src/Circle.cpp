@@ -14,7 +14,7 @@ Circle::Circle(){
 void Circle::draw(){
     circleColor.setBrightness(255);
     circleColor.setSaturation(255);
-    ofSetColor(circleColor, 40);
+    ofSetColor(circleColor, 30);
     ofDrawRectRounded(posX, posY, 300,300, radius);
 }
 

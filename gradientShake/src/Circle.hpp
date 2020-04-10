@@ -19,7 +19,6 @@ public:
     void setRaduis(int _radius);
     void setHue(int _hue);
     
-    
 private:
     int posX;
     int posY;
