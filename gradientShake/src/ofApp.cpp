@@ -7,7 +7,11 @@ void ofApp::setup(){
     ofSetRectMode(OF_RECTMODE_CENTER);
     ofSetCircleResolution(64);
     gui.setup();
-    gui.add(radius.setup("radius", 107, 0, 200));
+    gui.add(radius.setup("radius", 120, 120, 140));
+    gui.add(hue[0].setup("circle1 color", 1, 0, 255));
+    gui.add(hue[1].setup("circle2 color", 60, 0, 255));
+    gui.add(hue[2].setup("circle3 color", 146, 0, 255));
+    gui.add(hue[3].setup("circle4 color", 185, 0, 255));
     
     for(int i = 0; i < circleNum; i++){
         circles[i].setPos(ofRandom(-13, 13), ofRandom(-13, 13));
@@ -26,11 +30,10 @@ void ofApp::draw(){
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
         ofRotate(angle + startPos[i]);
             circles[i].setRaduis(radius);
-            circles[i].setColor( ofColor(0,ofRandom(30, 60),255, 40) );
+            circles[i].setHue(hue[i]);
             circles[i].draw();
         ofPopMatrix();
     }
-    
     gui.draw();
 }
 //--------------------------------------------------------------

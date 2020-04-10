@@ -17,7 +17,7 @@ public:
     void draw();
     void setPos(int _posX, int _posY);
     void setRaduis(int _radius);
-    void setColor(ofColor _color);
+    void setHue(int _hue);
     
     
 private:

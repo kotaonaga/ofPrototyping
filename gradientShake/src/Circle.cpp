@@ -12,7 +12,9 @@ Circle::Circle(){
 }
 
 void Circle::draw(){
-    ofSetColor(circleColor);
+    circleColor.setBrightness(255);
+    circleColor.setSaturation(255);
+    ofSetColor(circleColor, 40);
     ofDrawRectRounded(posX, posY, 300,300, radius);
 }
 
@@ -27,7 +29,7 @@ void Circle::setRaduis(int _radius){
 }
 
 
-void Circle::setColor(ofColor _color){
-    circleColor = _color;
+void Circle::setHue(int _hue){
+    circleColor.setHue(_hue);
 }
 
