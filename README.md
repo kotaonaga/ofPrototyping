@@ -14,6 +14,12 @@ openFrameworksで作った習作・プロトタイプたちです。
 
 [![](https://img.youtube.com/vi/kLNqOhc-Nt4/0.jpg)](https://www.youtube.com/watch?v=kLNqOhc-Nt4)
 
+## gradientShake
+少しいびつな円の色の重なり
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/gradientShake)
+
+[![](https://img.youtube.com/vi/7oe6igjE6sc/0.jpg)](https://www.youtube.com/watch?v=7oe6igjE6sc)
+
 
 ## lightDance
 円を描いて踊るライト  
