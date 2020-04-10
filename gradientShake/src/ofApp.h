@@ -25,10 +25,13 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     ofxPanel gui;
-    ofxIntSlider radius;
+    ofxFloatSlider radius;
+    ofxFloatSlider minRadius;
     ofxIntSlider hue[circleNum];
     Circle circles[circleNum];
-    int angle;
-    int startPos[4] = {0, 10, 20, 30};
+    
+    float rotateSpeed[circleNum] = {0.1, 0.2,0.3, 0.4};
+    float theta = 0;
+    int startPos[circleNum] = {0, 10, 20, 30};
     int rectAngle;
 };

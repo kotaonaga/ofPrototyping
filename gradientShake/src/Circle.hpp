@@ -16,13 +16,14 @@ public:
     Circle();
     void draw();
     void setPos(int _posX, int _posY);
-    void setRaduis(int _radius);
+    void setRadius(float _radius);
+    float getRadius();
     void setHue(int _hue);
     
 private:
     int posX;
     int posY;
-    int radius;
+    float radius;
     ofColor circleColor;
 };
 

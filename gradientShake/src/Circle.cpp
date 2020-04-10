@@ -24,8 +24,12 @@ void Circle::setPos(int _posX, int _posY){
 }
 
 
-void Circle::setRaduis(int _radius){
+void Circle::setRadius(float _radius){
     radius = _radius;
+}
+
+float Circle::getRadius(){
+    return radius;
 }
 
 

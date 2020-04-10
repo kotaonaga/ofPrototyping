@@ -7,7 +7,8 @@ void ofApp::setup(){
     ofSetRectMode(OF_RECTMODE_CENTER);
     ofSetCircleResolution(64);
     gui.setup();
-    gui.add(radius.setup("radius", 120, 120, 140));
+    gui.add(radius.setup("radius", 20, 10, 90));
+    gui.add(minRadius.setup("min radius", 10, 10, 90));
     gui.add(hue[0].setup("circle1 color", 1, 0, 255));
     gui.add(hue[1].setup("circle2 color", 60, 0, 255));
     gui.add(hue[2].setup("circle3 color", 146, 0, 255));
@@ -19,17 +20,27 @@ void ofApp::setup(){
 }
 
 void ofApp::update(){
-    angle++;
+//    for(int i = 0; i < circleNum; i++){
+//        rotateSpeed[i] += rotateSpeed[i];
+//    }
+    rotateSpeed[0] += rotateSpeed[0];
+    if(rotateSpeed[0] > 100) rotateSpeed[0] = 0.0;
+    cout << rotateSpeed[0] << endl;
+    theta += 0.05;
 }
 
 void ofApp::draw(){
+    float time = ofGetElapsedTimef();
     ofBackground(255);
     
     for(int i = 0; i < circleNum; i++){
         ofPushMatrix();
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-        ofRotate(angle + startPos[i]);
-            circles[i].setRaduis(radius);
+//        ofRotate(glm::radians(rotateSpeed[i] + startPos[i]));
+        ofRotateRad(rotateSpeed[i]);
+        
+        circles[i].setRadius(radius * abs(sin(theta)) + 90);
+        cout << circles[0].getRadius() << endl;
             circles[i].setHue(hue[i]);
             circles[i].draw();
         ofPopMatrix();
