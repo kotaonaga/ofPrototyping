@@ -34,5 +34,17 @@ class ofApp : public ofBaseApp{
     //GUI
     ofxPanel gui;
     ofxIntSlider fontSize;
+    ofxIntSlider wordsNum;
     ofxVec2Slider posRandom;
+    
+    vector<string> words{"あああ","帰りたい","寝たい","休みたい","泣きたい", "きゃああ"};
+    
+    ofColor clearTurquoise = ofColor(13,184,218);
+    ofColor brightYellow = ofColor(255,230,0);
+    ofColor springGreen = ofColor(163,202,15);
+    ofColor brightPink = ofColor(201,66,132);
+    ofColor brilliantOrange = ofColor(234,85,25);
+    
+    vector<ofColor>
+    wordsColor{clearTurquoise, brightYellow,springGreen,brightPink,brilliantOrange};
 };

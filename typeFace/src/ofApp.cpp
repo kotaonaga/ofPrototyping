@@ -1,10 +1,10 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
     gui.setup();
     gui.add(fontSize.setup("font size", 20, 10, 100));
-    gui.add(posRandom.setup("position random", ofVec2f(200,222), ofVec2f(0, 0), ofVec2f(300, 400) ));
+    gui.add(wordsNum.setup("word number", 30, 10, 100));
+    gui.add(posRandom.setup("position random", ofVec2f(200,240), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
     ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
     settings.antialiased = true;
@@ -22,14 +22,8 @@ void ofApp::setup(){
     
 }
 
-//--------------------------------------------------------------
+
 void ofApp::update(){
-//    ofTrueTypeFontSettings settings("AquaKana.ttc", fontSize);
-//    settings.antialiased = true;
-//    settings.addRanges(ofAlphabet::Japanese);
-//    font.load(settings);
-    
-    
     camera.update();
     
     if (camera.isFrameNew()){
@@ -41,15 +35,17 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    
+//    ofBackground(40);
     color.draw(0, 0);
     
     for (int i = 0; i < haar.blobs.size(); i++) {
-        ofSetColor(255);
-        for(int k = 0; k < 100; k++){
-            font.drawString("あ",
-            haar.blobs[i].boundingRect.x + ofRandom(posRandom->x),
-            haar.blobs[i].boundingRect.y + ofRandom(-50, posRandom->y)
+        
+        for(int k = 0; k < wordsNum; k++){
+//            ofSetColor((int) ofRandom(4));
+//            ofSetColor(100);
+            font.drawString(words[(int) ofRandom(5)],
+            haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
+            haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
             );
         }
     }
