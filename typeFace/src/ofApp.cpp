@@ -2,8 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui.setup();
+    gui.add(fontSize.setup("font size", 20, 10, 100));
+    gui.add(posRandom.setup("position random", ofVec2f(200,222), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
-    ofTrueTypeFontSettings settings("AquaKana.ttc", 10);
+    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
     settings.antialiased = true;
     settings.addRanges(ofAlphabet::Japanese);
     font.load(settings);
@@ -21,6 +24,12 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+//    ofTrueTypeFontSettings settings("AquaKana.ttc", fontSize);
+//    settings.antialiased = true;
+//    settings.addRanges(ofAlphabet::Japanese);
+//    font.load(settings);
+    
+    
     camera.update();
     
     if (camera.isFrameNew()){
@@ -37,17 +46,14 @@ void ofApp::draw(){
     
     for (int i = 0; i < haar.blobs.size(); i++) {
         ofSetColor(255);
-        ofNoFill();
-        ofDrawEllipse(haar.blobs[i].boundingRect.x,
-                      haar.blobs[i].boundingRect.y,
-                      haar.blobs[i].boundingRect.width,
-                      haar.blobs[i].boundingRect.height
-                      );
+        for(int k = 0; k < 100; k++){
+            font.drawString("あ",
+            haar.blobs[i].boundingRect.x + ofRandom(posRandom->x),
+            haar.blobs[i].boundingRect.y + ofRandom(-50, posRandom->y)
+            );
+        }
     }
-    ofSetColor(255);
-    for(int i = 0; i< 45; i++){
-        font.drawString("あ", 100 + ofRandom(-20, 20), 400 + ofRandom(-20, 20));
-    }
+    gui.draw();
 }
 
 //--------------------------------------------------------------

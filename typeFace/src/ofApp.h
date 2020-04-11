@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxCvHaarFinder.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -29,4 +30,9 @@ class ofApp : public ofBaseApp{
     ofxCvHaarFinder haar;
     
     ofTrueTypeFont font;
+    
+    //GUI
+    ofxPanel gui;
+    ofxIntSlider fontSize;
+    ofxVec2Slider posRandom;
 };
