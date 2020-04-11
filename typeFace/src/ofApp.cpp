@@ -43,10 +43,10 @@ void ofApp::draw(){
         for(int k = 0; k < wordsNum; k++){
 //            ofSetColor((int) ofRandom(4));
 //            ofSetColor(100);
-            font.drawString(words[(int) ofRandom(5)],
-            haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
-            haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
-            );
+//            font.drawString(words[(int) ofRandom(5)],
+//            haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
+//            haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
+//            );
         }
     }
     gui.draw();
