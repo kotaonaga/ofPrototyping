@@ -27,4 +27,6 @@ class ofApp : public ofBaseApp{
     ofxCvColorImage color;
     ofxCvGrayscaleImage gray;
     ofxCvHaarFinder haar;
+    
+    ofTrueTypeFont font;
 };
