@@ -6,11 +6,11 @@ void ofApp::setup(){
     gui.add(wordsNum.setup("word number", 30, 10, 100));
     gui.add(posRandom.setup("position random", ofVec2f(200,240), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
-    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
-    settings.antialiased = true;
-    settings.addRanges(ofAlphabet::Japanese);
-    font.load(settings);
-    
+//    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
+//    settings.antialiased = true;
+//    settings.addRanges(ofAlphabet::Japanese);
+//    font.load(settings);
+//    
     //haar
     camera.setup(640, 480);
     
@@ -19,6 +19,19 @@ void ofApp::setup(){
     
     haar.setup("haarcascade_frontalface_default.xml");
     haar.setScaleHaar(3);
+    
+     for(int k = 0; k < wordsNum; k++){
+         Word w;
+         words.push_back(w);
+         words[k].setup();
+         words[k].setColor();
+//                ofSetColor((int) ofRandom(4));
+//                ofSetColor(100);
+//                font.drawString(words[(int) ofRandom(5)],
+//                haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
+//                haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
+//                );
+            }
     
 }
 

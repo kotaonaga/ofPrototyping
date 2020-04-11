@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxCvHaarFinder.h"
 #include "ofxGui.h"
+#include "Word.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -29,7 +30,7 @@ class ofApp : public ofBaseApp{
     ofxCvGrayscaleImage gray;
     ofxCvHaarFinder haar;
     
-    ofTrueTypeFont font;
+//    ofTrueTypeFont font;
     
     //GUI
     ofxPanel gui;
@@ -37,6 +38,7 @@ class ofApp : public ofBaseApp{
     ofxIntSlider wordsNum;
     ofxVec2Slider posRandom;
     
+    vector<Word> words;
 //    vector<string> words{"あああ","帰りたい","寝たい","休みたい","泣きたい", "きゃああ"};
     
 //    ofColor clearTurquoise = ofColor(13,184,218);

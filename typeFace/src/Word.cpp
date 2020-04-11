@@ -1,10 +1,3 @@
-//
-//  Word.cpp
-//  typeFace
-//
-//  Created by kota on 2020/04/12.
-//
-
 #include "Word.hpp"
 
 Word::Word(){
@@ -12,6 +5,11 @@ Word::Word(){
 }
 
 void Word::setup(){
+    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
+    settings.antialiased = true;
+    settings.addRanges(ofAlphabet::Japanese);
+    font.load(settings);
+    
     int r = (int) ofRandom(5);
     displayedWord = words[r];
 }
@@ -21,6 +19,12 @@ void Word::setColor(){
     displayedWordColor = wordsColor[j];
 }
 
-void Word::draw(){
-    
+void Word::setPos(int _x, int _y){
+    x = _x;
+    y = _y;
+}
+
+void Word::draw(int _x, int _y){
+    ofSetColor(displayedWordColor);
+    font.drawString(displayedWord, _x,_y);
 }

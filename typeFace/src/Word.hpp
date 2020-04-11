@@ -22,12 +22,16 @@ private:
     vector<ofColor> wordsColor{clearTurquoise, brightYellow,springGreen,brightPink,brilliantOrange};
     string displayedWord;
     ofColor displayedWordColor;
+    ofTrueTypeFont font;
+    int x;
+    int y;
     
 public:
     Word();
     void setup();
     void setColor();
-    void draw();
+    void setPos(int _x, int _y);
+    void draw(int _x, int _y);
     
     
 };
