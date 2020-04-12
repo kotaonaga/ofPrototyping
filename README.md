@@ -46,3 +46,10 @@ openFrameworksで作った習作・プロトタイプたちです。
 
 [![](https://img.youtube.com/vi/fO4TJBVEPok/0.jpg)](https://www.youtube.com/watch?v=fO4TJBVEPok)
 
+
+## typeFace
+遠くから見たり、入り込めたりする楽器。  
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/typeFace)
+
+[![](https://img.youtube.com/vi/lBa1nCDuCS0/0.jpg)](https://www.youtube.com/watch?v=lBa1nCDuCS0)
+
