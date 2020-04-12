@@ -48,7 +48,7 @@ openFrameworksで作った習作・プロトタイプたちです。
 
 
 ## typeFace
-遠くから見たり、入り込めたりする楽器。  
+「本音は顔に書いてある」らしいですが、顔に本音を出すのはたまに難しいので、いつでも本音を出せる装置があるといいなと思います。  
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/typeFace)
 
 [![](https://img.youtube.com/vi/lBa1nCDuCS0/0.jpg)](https://www.youtube.com/watch?v=lBa1nCDuCS0)
