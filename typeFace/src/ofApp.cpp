@@ -3,15 +3,11 @@
 void ofApp::setup(){
     gui.setup();
     gui.add(fontSize.setup("font size", 20, 10, 100));
-    gui.add(wordsNum.setup("word number", 30, 10, 100));
-    gui.add(posRandom.setup("position random", ofVec2f(200,240), ofVec2f(0, 0), ofVec2f(300, 400) ));
+    gui.add(background.setup("background",255, 0, 255));
+    gui.add(wordsNum.setup("wordsNum",30, 0, 40));
+    gui.add(posRandom.setup("position random", ofVec2f(113,255), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
-//    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
-//    settings.antialiased = true;
-//    settings.addRanges(ofAlphabet::Japanese);
-//    font.load(settings);
-//    
-    //haar
+    
     camera.setup(640, 480);
     
     color.allocate(camera.getWidth(), camera.getHeight());
@@ -20,18 +16,12 @@ void ofApp::setup(){
     haar.setup("haarcascade_frontalface_default.xml");
     haar.setScaleHaar(3);
     
-     for(int k = 0; k < wordsNum; k++){
-         Word w;
-         words.push_back(w);
-         words[k].setup();
-         words[k].setColor();
-//                ofSetColor((int) ofRandom(4));
-//                ofSetColor(100);
-//                font.drawString(words[(int) ofRandom(5)],
-//                haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
-//                haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
-//                );
-            }
+    for(int k = 0; k < wordsNum; k++){
+        Word w;
+        words.push_back(w);
+        words[k].setup();
+        words[k].setColor();
+    }
     
 }
 
@@ -46,22 +36,21 @@ void ofApp::update(){
     }
 }
 
-//--------------------------------------------------------------
+
 void ofApp::draw(){
-//    ofBackground(40);
+    ofSetColor(background);
     color.draw(0, 0);
     
     for (int i = 0; i < haar.blobs.size(); i++) {
-        
         for(int k = 0; k < wordsNum; k++){
-//            ofSetColor((int) ofRandom(4));
-//            ofSetColor(100);
-//            font.drawString(words[(int) ofRandom(5)],
-//            haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
-//            haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
-//            );
+            words[k].setPos(
+                            haar.blobs[i].boundingRect.x + ofRandom(-50, posRandom->x),
+                            haar.blobs[i].boundingRect.y + ofRandom(-100, posRandom->y)
+                            );
+            words[k].draw();
         }
     }
+    
     gui.draw();
 }
 

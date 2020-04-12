@@ -36,6 +36,7 @@ class ofApp : public ofBaseApp{
     ofxPanel gui;
     ofxIntSlider fontSize;
     ofxIntSlider wordsNum;
+    ofxIntSlider background;
     ofxVec2Slider posRandom;
     
     vector<Word> words;

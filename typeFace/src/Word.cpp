@@ -1,15 +1,27 @@
 #include "Word.hpp"
 
+Boolean Word::isInitialized  = false;
+ofTrueTypeFont Word::font;
+
 Word::Word(){
+    //ofApp.hのisFirstを使っているのでよろしくない。
     
 }
 
+void Word::init(){
+    if(Word::isInitialized == false){
+        ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
+        settings.antialiased = true;
+        settings.addRanges(ofAlphabet::Japanese);
+        Word::font.load(settings);
+        
+        Word::isInitialized = true;
+        cout << "初期化したよ！" << endl;
+    }
+}
+
 void Word::setup(){
-    ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
-    settings.antialiased = true;
-    settings.addRanges(ofAlphabet::Japanese);
-    font.load(settings);
-    
+    init();
     int r = (int) ofRandom(5);
     displayedWord = words[r];
 }
@@ -24,7 +36,7 @@ void Word::setPos(int _x, int _y){
     y = _y;
 }
 
-void Word::draw(int _x, int _y){
+void Word::draw(){
     ofSetColor(displayedWordColor);
-    font.drawString(displayedWord, _x,_y);
+    Word::font.drawString(displayedWord, x,y);
 }
