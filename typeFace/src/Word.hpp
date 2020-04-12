@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 
+
 class Word{
 private:
     vector<string> words{"あああ","帰りたい","寝たい","休みたい","泣きたい", "きゃああ"};

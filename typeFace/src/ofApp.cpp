@@ -4,8 +4,7 @@ void ofApp::setup(){
     gui.setup();
     gui.add(fontSize.setup("font size", 20, 10, 100));
     gui.add(background.setup("background",255, 0, 255));
-    gui.add(wordsNum.setup("wordsNum",30, 0, 40));
-    gui.add(posRandom.setup("position random", ofVec2f(113,255), ofVec2f(0, 0), ofVec2f(300, 400) ));
+    gui.add(posRandom.setup("position random", ofVec2f(113,289), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
     
     camera.setup(640, 480);

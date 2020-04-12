@@ -4,17 +4,14 @@ Boolean Word::isInitialized  = false;
 ofTrueTypeFont Word::font;
 
 Word::Word(){
-    //ofApp.hのisFirstを使っているのでよろしくない。
-    
 }
 
 void Word::init(){
     if(Word::isInitialized == false){
-        ofTrueTypeFontSettings settings("AquaKana.ttc", 35);
+        ofTrueTypeFontSettings settings("AquaKana.ttc", 40);
         settings.antialiased = true;
         settings.addRanges(ofAlphabet::Japanese);
         Word::font.load(settings);
-        
         Word::isInitialized = true;
         cout << "初期化したよ！" << endl;
     }
