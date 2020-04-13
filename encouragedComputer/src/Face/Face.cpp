@@ -7,8 +7,6 @@ int Face::eyeSize = 60;
 int Face::faceWidth = 0;
 
 Face::Face(){
-    ofSetCircleResolution(128);
-    ofSetLineWidth(10);
 }
 
 void Face::setFaceWidth(int _chatWidth){
@@ -20,6 +18,9 @@ int Face::getFaceWidth(){
 }
 
 void Face::drawEyes(){
+    ofSetLineWidth(10);
+    ofSetCircleResolution(100);
+
    if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
           isClosed = true;
           closedTime = ofGetElapsedTimeMillis();
