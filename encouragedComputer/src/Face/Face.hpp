@@ -8,17 +8,19 @@ class Face{
 private:
     int mode;
     
-    int openedTime = 0;
-    int closedTime = 0;
-    Boolean isClosed = false;
-    int eyeSize = 60;
-    int faceWidth = 0;
+    static int openedTime;
+    static int closedTime;
+    static Boolean isClosed;
+    static int eyeSize;
+    static int faceWidth;
     
 public:
     Face();
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     void draw();
+    void drawSkin();
+    void drawEyes();
     
 };
 #endif /* Face_hpp */
