@@ -26,6 +26,5 @@ public:
     void setText(string _textTyped);
     string getText();
     void drawText();
-    
 };
 #endif /* Chat_hpp */
