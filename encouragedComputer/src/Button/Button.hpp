@@ -10,9 +10,15 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "ofxSvg.h"
 
 class Button{
 private:
+    int radius = 80;
+    float step;
+    ofxSVG svg;
+    vector<ofPolyline> outlines;
+    
 public:
     Button();
     void draw();
