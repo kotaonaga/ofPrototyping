@@ -12,9 +12,12 @@
 class Chat {
 private:
     int chatWidth = 250;
+    int posX = 0;
+    
 public:
     Chat();
     int getChatWidth();
+    void setPos(int _faceWidth);
     void draw();
 };
 #endif /* Chat_hpp */

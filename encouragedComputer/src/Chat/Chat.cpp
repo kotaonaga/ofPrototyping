@@ -16,8 +16,12 @@ int Chat::getChatWidth(){
     return chatWidth;
 }
 
+void Chat::setPos(int _faceWidth){
+    posX = _faceWidth;
+}
+
 
 void Chat::draw(){
     ofSetColor(255);
-    ofDrawRectangle(faceWidth, 0, chatWidth, ofGetHeight());
+    ofDrawRectangle(posX, 0, chatWidth, ofGetHeight());
 }

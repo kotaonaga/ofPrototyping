@@ -9,6 +9,10 @@ void Face::setFaceWidth(int _chatWidth){
     faceWidth = ofGetWidth() - _chatWidth;
 }
 
+int Face::getFaceWidth(){
+    return faceWidth;
+}
+
 void Face::draw(){
     if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
         isClosed = true;

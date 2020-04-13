@@ -12,11 +12,12 @@ private:
     int closedTime = 0;
     Boolean isClosed = false;
     int eyeSize = 60;
-    int faceWidth;
+    int faceWidth = 0;
     
 public:
     Face();
     void setFaceWidth(int _chatWidth);
+    int getFaceWidth();
     void draw();
     
 };
