@@ -30,8 +30,6 @@ public:
     void setColor();
     void setPos(int _x, int _y);
     void draw();
-    
-    
 };
 
 #endif /* Word_hpp */

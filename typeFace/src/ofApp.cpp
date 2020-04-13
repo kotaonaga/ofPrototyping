@@ -7,7 +7,7 @@ void ofApp::setup(){
     gui.add(posRandom.setup("position random", ofVec2f(113,289), ofVec2f(0, 0), ofVec2f(300, 400) ));
     ofBackground(40);
     
-    camera.setup(640, 480);
+    camera.setup(480, 480);
     
     color.allocate(camera.getWidth(), camera.getHeight());
     gray.allocate(camera.getWidth(), camera.getHeight());
