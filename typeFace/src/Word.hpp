@@ -24,6 +24,7 @@ private:
 public:
     static ofTrueTypeFont font;
     static Boolean isInitialized;
+    
     Word();
     void init();
     void setup();
