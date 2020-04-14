@@ -23,9 +23,7 @@ class ofApp : public ofBaseApp{
     
     float time;
     ofTrueTypeFont font;
-    int r = 300;
-    int x = 0;
-    int y = 0;
+
     int fall = 0;
     float pos = 0;
     float prevPos = 0;

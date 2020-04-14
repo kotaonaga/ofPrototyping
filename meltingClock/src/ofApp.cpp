@@ -19,7 +19,8 @@ void ofApp::draw(){
     cout << "pos:" << pos<< endl;
     cout << "pos-1:" << pos - 1 << endl;
     //時間が溶けていく
-    ofBackground(0);
+    ofBackground(255);
+    
     //時計の針
     time = ofGetElapsedTimeMillis() / 1000;
     pos = fmod(time, 12);
@@ -31,7 +32,7 @@ void ofApp::draw(){
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     
-    ofSetColor(255);
+    ofSetColor(0);
     ofRotate(pos * 30.0);
     ofLine(0, 0, 0, -300);
     ofPopMatrix();
@@ -49,7 +50,7 @@ void ofApp::draw(){
         ofPushMatrix();
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
         ofRotate( (pos - 1) * 30.0);
-        rect = font.getStringBoundingBox(dials[pos-1], 0, -300);
+        rect = font.getStringBoundingBox(dials[pos], 0, -300);
         font.drawString(fallenDials[pos], rect.x - rect.width/2, -300 + fall);
         ofPopMatrix();
     
