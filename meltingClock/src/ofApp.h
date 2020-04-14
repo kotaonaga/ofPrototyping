@@ -25,8 +25,16 @@ class ofApp : public ofBaseApp{
     ofTrueTypeFont font;
 
     int fall = 0;
+    float addedHue = 0;
     float pos = 0;
     float prevPos = 0;
+    int dialAlpha = 100;
+    
+    float saturation;
+    float brightness;
+    float h, s, b;
+    ofColor dialColor = ofColor(0, 0, 0);
+    
     vector<string> dials{"12", "1", "2", "3","4", "5", "6","7", "8", "9","10", "11"};
     
     vector<string> fallenDials{"11", "12", "1", "2", "3","4", "5", "6","7", "8", "9","10"};
