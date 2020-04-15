@@ -8,11 +8,13 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     clock.increaseFall(5);
-    clock.decreaseAlpha(0.8);
+    clock.decreaseAlpha(1.1);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    clock.setPosition();
+    clock.fallReset();
     clock.drawHand();
     clock.setDialColor(112, 13, 88);
     clock.drawDial();

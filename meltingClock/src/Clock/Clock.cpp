@@ -20,22 +20,24 @@ void Clock::decreaseAlpha(float _num){
     dialAlpha -= _num;
 }
 
-void Clock::drawHand(){
-    ofBackground(234, 246, 253);
-    
-    //時計の針
+void Clock::setPosition(){
     time = ofGetElapsedTimeMillis() / 1000;
     pos = fmod(time, 12);
+}
+
+void Clock::fallReset(){
     if(prevPos != pos){
         fall = 0;
         dialAlpha = 100;
         addedHue = 0;
     }
     prevPos = pos;
-    
+}
+
+void Clock::drawHand(){
+    ofBackground(234, 246, 253);
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-    
     //針の色
     ofSetColor(248, 198, 189);
     ofRotate(pos * 30.0);
@@ -56,7 +58,6 @@ void Clock::setDialColor(float _hue, float _saturation, float _brightness){
 }
 
 void Clock::drawDial(){
-        //文字盤
         ofPushMatrix();
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
         ofRotate(pos * 30.0);
@@ -67,7 +68,6 @@ void Clock::drawDial(){
 }
 
 void Clock::drawFallingDial(){
-        //文字盤落下
             ofPushMatrix();
             ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
             ofRotate( (pos - 1) * 30.0);

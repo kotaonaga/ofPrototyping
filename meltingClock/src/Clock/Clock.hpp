@@ -27,12 +27,14 @@ private:
     
 public:
     Clock();
-    void increaseFall(int _num); //文字を落下させる
-    void decreaseAlpha(float _num); //文字の透明度を上げる
-    void drawHand(); //時計の針を描く
-    void setDialColor(float _hue, float _saturation, float _brightness); //文字盤の色を設定
-    void drawDial(); //文字盤を描く
-    void drawFallingDial(); //落下する文字盤を描く
+    void setPosition();
+    void fallReset();
+    void increaseFall(int _num);
+    void decreaseAlpha(float _num);
+    void drawHand();
+    void setDialColor(float _hue, float _saturation, float _brightness);
+    void drawDial();
+    void drawFallingDial();
 };
 
 #endif /* Clock_hpp */
