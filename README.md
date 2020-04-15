@@ -1,6 +1,14 @@
 # ofPrototyping
 openFrameworksで作った習作・プロトタイプたちです。
 
+## meltingClock
+
+見て癒される以外の使い道がない「12秒計」です。過ぎ去った時間は溶けていきます。ぼーーっと見てると時間も溶けていきます。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/meltingClock)
+
+[![](https://img.youtube.com/vi/pfgyiM645Ug/0.jpg)](https://www.youtube.com/watch?v=pfgyiM645Ug)
+
 
 ## colorChanging
 時間とともに色が移り変わる寒天  
