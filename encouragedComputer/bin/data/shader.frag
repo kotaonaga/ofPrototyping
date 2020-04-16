@@ -14,11 +14,7 @@ vec3 hsb2rgb( in vec3 c ){
 }
 
 void main(){
-    float r = 0.3;
-    float g = 0.6;
     float hue = u_hue;
-    float a = 1.0;
-//    outputColor = vec4(r, g, b, a);
     vec3 color = vec3(0.0);
     color = hsb2rgb(vec3(hue, 0.4, 0.8));
     outputColor = vec4(color, 1.0);
