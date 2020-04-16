@@ -50,6 +50,4 @@ void Chat::moveText(){
 void Chat::resetTextPos(){
     cout << "リセットしたよ" << endl;
     textPos = 50;
-    
-//    mode = 2;
 }
