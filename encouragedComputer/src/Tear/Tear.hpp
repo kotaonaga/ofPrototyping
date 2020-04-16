@@ -13,12 +13,16 @@ private:
     int A = 6;
     int fallPosRight = 0;
     int fallPosLeft = 0;
+    int nextRightPos = 0;
+    int nextLeftPos = 0;
     
 public:
     Tear();
     int getY();
     void setupRight();
     void setupLeft();
+    int getNextRightPos();
+    int getNextLeftPos();
     void fallRight();
     void fallLeft();
     int getFallPosRight();

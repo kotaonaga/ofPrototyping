@@ -20,16 +20,25 @@ int Tear::getY(){
 void Tear::setupRight(){
     x = 0;
     y = 0;
+    nextRightPos = ofRandom(250, 350);
 }
 
 void Tear::setupLeft(){
     x = 0;
     y = 0;
+    nextLeftPos = ofRandom(250, 350);
 }
 
+int Tear::getNextRightPos(){
+    return nextRightPos;
+}
+
+int Tear::getNextLeftPos(){
+    return nextLeftPos;
+}
 
 void Tear::fallRight(){
-    fallPosRight += 3;
+    fallPosRight += 2.5;
 }
 
 void Tear::fallLeft(){
@@ -52,7 +61,7 @@ void Tear::resetFallPosLeft(){
     fallPosLeft = 0;
 }
 
-void Tear::drawRight(){
+void Tear::drawLeft(){
     ofPushMatrix();
     ofTranslate(ofGetWidth() * 1/3, ofGetHeight() * 1/3 + 30 + fallPosRight);
     ofRotate(-90);
@@ -65,7 +74,7 @@ void Tear::drawRight(){
     ofPopMatrix();
 }
 
-void Tear::drawLeft(){
+void Tear::drawRight(){
         ofPushMatrix();
         ofTranslate(ofGetWidth() * 2/3, ofGetHeight() * 1/3 + 30 + fallPosLeft);
         ofRotate(-90);
