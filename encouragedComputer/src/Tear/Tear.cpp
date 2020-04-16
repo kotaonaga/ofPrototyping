@@ -13,15 +13,20 @@ Tear::Tear(){
     
 }
 
+int Tear::getY(){
+    return y;
+}
 
-//void fallRight();
-//void fallLeft();
-//int getFallRightPos();
-//int getFallLeftPos();
-//void resetRight();
-//void drawRight();
-//void drawLeft();
-// fallPosRight
+void Tear::setupRight(){
+    x = 0;
+    y = 0;
+}
+
+void Tear::setupLeft(){
+    x = 0;
+    y = 0;
+}
+
 
 void Tear::fallRight(){
     fallPosRight += 3;

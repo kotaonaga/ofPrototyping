@@ -6,6 +6,8 @@
 
 class Tear{
 private:
+    int x = 0;
+    int y = 0;
     float r;
     int R = 50;
     int A = 6;
@@ -14,7 +16,9 @@ private:
     
 public:
     Tear();
-    
+    int getY();
+    void setupRight();
+    void setupLeft();
     void fallRight();
     void fallLeft();
     int getFallPosRight();
