@@ -1,12 +1,25 @@
 #version 150
 
-uniform float t;
+//uniform float u_time;
+uniform float u_blue;
 out vec4 outputColor;
 
+vec3 hsb2rgb( in vec3 c ){
+    vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                             6.0)-3.0)-1.0,
+                     0.0,
+                     1.0 );
+    rgb = rgb*rgb*(3.0-2.0*rgb);
+    return c.z * mix(vec3(1.0), rgb, c.y);
+}
+
 void main(){
-    float r = abs(sin(t * 2.0));
+    float r = 0.3;
     float g = 0.6;
-    float b = 1.0;
+    float b = u_blue;
     float a = 1.0;
-    outputColor = vec4(r, g, b, a);
+//    outputColor = vec4(r, g, b, a);
+    vec3 color = vec3(0.0);
+    color = hsb2rgb(vec3(b, 1.0, 1.0));
+    outputColor = vec4(color, 1.0);
 }
