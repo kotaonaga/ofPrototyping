@@ -18,7 +18,7 @@ private:
     static ofTrueTypeFont font;
     static string displayedText;
     static int textPos;
-    int mode = 0;
+//    int mode = 0;
     
 public:
     Chat();
@@ -29,7 +29,9 @@ public:
     string getText();
     void drawText();
     void moveText();
+    void resetTextPos();
     void setMode(int _mode);
+    int getTextPos();
     int getMode();
 };
 #endif /* Chat_hpp */

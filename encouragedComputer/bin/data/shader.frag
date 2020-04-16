@@ -1,7 +1,7 @@
 #version 150
 
 //uniform float u_time;
-uniform float u_blue;
+uniform float u_hue;
 out vec4 outputColor;
 
 vec3 hsb2rgb( in vec3 c ){
@@ -16,10 +16,10 @@ vec3 hsb2rgb( in vec3 c ){
 void main(){
     float r = 0.3;
     float g = 0.6;
-    float b = u_blue;
+    float hue = u_hue;
     float a = 1.0;
 //    outputColor = vec4(r, g, b, a);
     vec3 color = vec3(0.0);
-    color = hsb2rgb(vec3(b, 1.0, 1.0));
+    color = hsb2rgb(vec3(hue, 0.4, 0.8));
     outputColor = vec4(color, 1.0);
 }

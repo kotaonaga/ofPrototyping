@@ -21,6 +21,10 @@ void Chat::setPos(int _faceWidth){
     posX = _faceWidth;
 }
 
+int Chat::getTextPos(){
+    return textPos;
+}
+
 void Chat::draw(){
     ofSetColor(255);
     ofDrawRectangle(posX, 0, chatWidth, ofGetHeight());
@@ -36,20 +40,24 @@ string Chat::getText(){
 
 void Chat::drawText(){
     ofSetColor(255);
-    font.drawString(displayedText, 50, ofGetHeight() - 100);
+    font.drawString(displayedText, textPos, ofGetHeight() - 100);
 }
 
 void Chat::moveText(){
-    textPos++;
-    if(textPos > ofGetWidth()){
-        mode = 0;
-    }
+    textPos += 6;
+}
+
+void Chat::resetTextPos(){
+    cout << "リセットしたよ" << endl;
+    textPos = 50;
+    
+//    mode = 2;
 }
 
 void Chat::setMode(int _mode){
-    mode = _mode;
+//    mode = _mode;
 }
 
 int Chat::getMode(){
-    return mode;
+//    return mode;
 }
