@@ -53,11 +53,3 @@ void Chat::resetTextPos(){
     
 //    mode = 2;
 }
-
-void Chat::setMode(int _mode){
-//    mode = _mode;
-}
-
-int Chat::getMode(){
-//    return mode;
-}

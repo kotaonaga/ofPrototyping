@@ -1,10 +1,3 @@
-//
-//  Chat.hpp
-//  encouragedComputer
-//
-//  Created by kota on 2020/04/13.
-//
-
 #ifndef Chat_hpp
 #define Chat_hpp
 
@@ -18,7 +11,6 @@ private:
     static ofTrueTypeFont font;
     static string displayedText;
     static int textPos;
-//    int mode = 0;
     
 public:
     Chat();
@@ -30,8 +22,6 @@ public:
     void drawText();
     void moveText();
     void resetTextPos();
-    void setMode(int _mode);
     int getTextPos();
-    int getMode();
 };
 #endif /* Chat_hpp */
