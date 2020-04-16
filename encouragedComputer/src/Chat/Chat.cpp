@@ -3,6 +3,7 @@
 
 ofTrueTypeFont Chat::font;
 string Chat::displayedText = "";
+int Chat::textPos = 50;
 
 Chat::Chat(){
 //    ofTrueTypeFontSettings settings("MPLUSRounded1c-Regular.ttf", 40);
@@ -35,5 +36,20 @@ string Chat::getText(){
 
 void Chat::drawText(){
     ofSetColor(255);
-    font.drawString(displayedText, 0, ofGetHeight() - 100);
+    font.drawString(displayedText, 50, ofGetHeight() - 100);
+}
+
+void Chat::moveText(){
+    textPos++;
+    if(textPos > ofGetWidth()){
+        mode = 0;
+    }
+}
+
+void Chat::setMode(int _mode){
+    mode = _mode;
+}
+
+int Chat::getMode(){
+    return mode;
 }

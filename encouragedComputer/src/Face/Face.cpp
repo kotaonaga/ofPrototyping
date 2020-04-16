@@ -33,12 +33,12 @@ void Face::drawEyes(){
       
       if (isClosed == false) {
           ofSetColor(255);
-          ofDrawCircle(faceWidth * 1/3, ofGetHeight()/3, eyeSize/2);
-          ofDrawCircle(faceWidth * 2/3, ofGetHeight()/3, eyeSize/2);
+          ofDrawCircle(ofGetWidth() * 1/3, ofGetHeight()/3, eyeSize/2);
+          ofDrawCircle(ofGetWidth() * 2/3, ofGetHeight()/3, eyeSize/2);
       } else {
           ofSetColor(255);
-          ofLine(faceWidth * 1/3 - (eyeSize * 2/3), ofGetHeight()/3, faceWidth * 1/3 + (eyeSize * 2/3), ofGetHeight()/3);
-          ofLine(faceWidth * 2/3 - (eyeSize * 2/3), ofGetHeight()/3, faceWidth * 2/3 + (eyeSize * 2/3), ofGetHeight()/3);
+          ofLine(ofGetWidth() * 1/3 - (eyeSize * 2/3), ofGetHeight()/3, ofGetWidth() * 1/3 + (eyeSize * 2/3), ofGetHeight()/3);
+          ofLine(ofGetWidth() * 2/3 - (eyeSize * 2/3), ofGetHeight()/3, ofGetWidth() * 2/3 + (eyeSize * 2/3), ofGetHeight()/3);
       }
 }
 
@@ -54,10 +54,10 @@ void Face::drawSkin(){
     }
     
     if (isClosed == false) {
-        ofDrawRectangle(0, 0, faceWidth, ofGetHeight());
+        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     } else {
         ofSetColor(255, 30, 255);
-        ofDrawRectangle(0, 0, faceWidth, ofGetHeight());
+        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     }
 }
 

@@ -1,10 +1,3 @@
-//
-//  Button.hpp
-//  encouragedComputer
-//
-//  Created by kota on 2020/04/13.
-//
-
 #ifndef Button_hpp
 #define Button_hpp
 
@@ -16,6 +9,7 @@ class Button{
 private:
     int radius = 80;
     float step;
+    ofImage img;
     ofxSVG svg;
     vector<ofPolyline> outlines;
     
