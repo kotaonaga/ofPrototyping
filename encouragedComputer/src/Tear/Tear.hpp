@@ -9,15 +9,20 @@ private:
     float r;
     int R = 50;
     int A = 6;
-    int fallPos = 0;
+    int fallPosRight = 0;
+    int fallPosLeft = 0;
     
 public:
     Tear();
     
-    void fall();
-    int getFallPos();
-    void reset();
-    void draw();
+    void fallRight();
+    void fallLeft();
+    int getFallPosRight();
+    int getFallPosLeft();
+    void resetFallPosRight();
+    void resetFallPosLeft();
+    void drawRight();
+    void drawLeft();
 };
 
 #endif /* Tear_hpp */
