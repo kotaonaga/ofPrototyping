@@ -38,7 +38,7 @@ int Tear::getNextLeftPos(){
 }
 
 void Tear::fallRight(){
-    fallPosRight += 2.5;
+    fallPosRight += 3;
 }
 
 void Tear::fallLeft(){
