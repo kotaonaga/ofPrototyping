@@ -10,7 +10,7 @@ Chat::Chat(){
 //    settings.antialiased = true;
 //    settings.addRanges(ofAlphabet::Japanese);
 //    font.load(settings);
-    font.load("MPLUSRounded1c-Regular.ttf", 40);
+    font.load("MPLUSRounded1c-Regular.ttf", 50);
 }
 
 int Chat::getChatWidth(){
@@ -40,11 +40,11 @@ string Chat::getText(){
 
 void Chat::drawText(){
     ofSetColor(255);
-    font.drawString(displayedText, textPos, ofGetHeight() - 100);
+    font.drawString(displayedText, textPos, ofGetHeight() - 200);
 }
 
 void Chat::moveText(){
-    textPos += 6;
+    textPos += 14;
 }
 
 void Chat::resetTextPos(){

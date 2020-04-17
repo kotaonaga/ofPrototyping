@@ -63,7 +63,7 @@ void Tear::resetFallPosLeft(){
 
 void Tear::drawLeft(){
     ofPushMatrix();
-    ofTranslate(ofGetWidth() * 1/3, ofGetHeight() * 1/3 + 30 + fallPosRight);
+    ofTranslate(ofGetWidth() * 1/3, ofGetHeight() * 1/3 + 30 + fallPosLeft);
     ofRotate(-90);
     ofBeginShape();
     for (float t = 0; t < TWO_PI; t += 0.1) {
@@ -76,7 +76,7 @@ void Tear::drawLeft(){
 
 void Tear::drawRight(){
         ofPushMatrix();
-        ofTranslate(ofGetWidth() * 2/3, ofGetHeight() * 1/3 + 30 + fallPosLeft);
+        ofTranslate(ofGetWidth() * 2/3, ofGetHeight() * 1/3 + 30 + fallPosRight);
         ofRotate(-90);
         ofBeginShape();
         for (float t = 0; t < TWO_PI; t += 0.1) {
