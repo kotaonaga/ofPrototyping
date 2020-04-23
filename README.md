@@ -9,6 +9,12 @@ openFrameworksで作った習作・プロトタイプたちです。
 
 [![](https://img.youtube.com/vi/pfgyiM645Ug/0.jpg)](https://www.youtube.com/watch?v=pfgyiM645Ug)
 
+## typeFace
+「本音は顔に書いてある」らしいですが、顔に本音を出すのはたまに難しいので、いつでも本音を出せる装置があるといいなと思います。  
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/typeFace)
+
+[![](https://img.youtube.com/vi/lBa1nCDuCS0/0.jpg)](https://www.youtube.com/watch?v=lBa1nCDuCS0)
+
 
 ## colorChanging
 時間とともに色が移り変わる寒天  
@@ -55,9 +61,5 @@ openFrameworksで作った習作・プロトタイプたちです。
 [![](https://img.youtube.com/vi/fO4TJBVEPok/0.jpg)](https://www.youtube.com/watch?v=fO4TJBVEPok)
 
 
-## typeFace
-「本音は顔に書いてある」らしいですが、顔に本音を出すのはたまに難しいので、いつでも本音を出せる装置があるといいなと思います。  
-[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/typeFace)
 
-[![](https://img.youtube.com/vi/lBa1nCDuCS0/0.jpg)](https://www.youtube.com/watch?v=lBa1nCDuCS0)
 
