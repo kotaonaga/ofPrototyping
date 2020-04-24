@@ -21,30 +21,37 @@ AIカウンセリングなどコンピュータに「励まされる」ことに
 [![](https://img.youtube.com/vi/pfgyiM645Ug/0.jpg)](https://www.youtube.com/watch?v=pfgyiM645Ug)
 
 ## typeFace
-「本音は顔に書いてある」らしいですが、顔に本音を出すのはたまに難しいので、いつでも本音を出せる装置があるといいなと思います。  
+
+「本音は顔に書いてある」らしいですが、顔に本音を出すのはたまに難しいので、いつでも本音を出せる装置があるといいなと思います。 
+
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/typeFace)
 
 [![](https://img.youtube.com/vi/lBa1nCDuCS0/0.jpg)](https://www.youtube.com/watch?v=lBa1nCDuCS0)
 
+## gradientShake
+
+少しいびつな円の色の重なり。独自の表情を見せます。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/gradientShake)
+
+[![](https://img.youtube.com/vi/7oe6igjE6sc/0.jpg)](https://www.youtube.com/watch?v=7oe6igjE6sc)
+
 
 ## colorChanging
+
 時間とともに色が移り変わる寒天  
+
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/colorChanging)
 
 [![](https://img.youtube.com/vi/DrhMItWQLTw/0.jpg)](https://www.youtube.com/watch?v=DrhMItWQLTw)
 
 ## daySphere
+
 円と色だけで1日の流れを表現しました。  
+
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/daySphere)
 
 [![](https://img.youtube.com/vi/kLNqOhc-Nt4/0.jpg)](https://www.youtube.com/watch?v=kLNqOhc-Nt4)
-
-## gradientShake
-少しいびつな円の色の重なり
-[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/gradientShake)
-
-[![](https://img.youtube.com/vi/7oe6igjE6sc/0.jpg)](https://www.youtube.com/watch?v=7oe6igjE6sc)
-
 
 ## lightDance
 円を描いて踊るライト  
