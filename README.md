@@ -1,6 +1,17 @@
 # ofPrototyping
 openFrameworksで作った習作・プロトタイプたちです。
 
+## 励まされるコンピュータ
+
+励まされるのもいいですが、励ますのも元気が出るので励ませるコンピュータを作りました。
+励ます言葉を入力して伝えるたびに元気になっていきます〜
+AIカウンセリングなどコンピュータに「励まされる」ことに目がいきがちですが、コンピュータを「励ます」ことを考えてみてもいいんじゃないでしょうか。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/encouragedComputer)
+
+[![](https://img.youtube.com/vi/TD9jPUfW3r0/0.jpg)](https://www.youtube.com/watch?v=TD9jPUfW3r0)
+
+
 ## meltingClock
 
 見て癒される以外の使い道がない「12秒計」です。過ぎ去った時間は溶けていきます。ぼーーっと見てると時間も溶けていきます。
