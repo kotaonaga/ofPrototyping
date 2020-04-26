@@ -1,6 +1,7 @@
 # ofPrototyping
 openFrameworksで作った習作・プロトタイプたちです。
 
+
 ## 励まされるコンピュータ
 
 励まされるのもいいですが、励ますのも元気が出るので励ませるコンピュータを作りました。
@@ -44,6 +45,16 @@ AIカウンセリングなどコンピュータに「励まされる」ことに
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/colorChanging)
 
 [![](https://img.youtube.com/vi/DrhMItWQLTw/0.jpg)](https://www.youtube.com/watch?v=DrhMItWQLTw)
+
+
+## ofPolylineStudy
+
+ofPolylineの勉強。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/ofPolylineStudy)
+
+[![](https://img.youtube.com/vi/LjPoN09fwPQ/0.jpg)](https://www.youtube.com/watch?v=LjPoN09fwPQ)
+
 
 ## daySphere
 
