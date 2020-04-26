@@ -37,6 +37,13 @@ AIカウンセリングなどコンピュータに「励まされる」ことに
 
 [![](https://img.youtube.com/vi/7oe6igjE6sc/0.jpg)](https://www.youtube.com/watch?v=7oe6igjE6sc)
 
+## ofPolylineStudy
+
+ofPolylineの勉強。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/ofPolylineStudy)
+
+[![](https://img.youtube.com/vi/LjPoN09fwPQ/0.jpg)](https://www.youtube.com/watch?v=LjPoN09fwPQ)
 
 ## colorChanging
 
@@ -45,15 +52,6 @@ AIカウンセリングなどコンピュータに「励まされる」ことに
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/colorChanging)
 
 [![](https://img.youtube.com/vi/DrhMItWQLTw/0.jpg)](https://www.youtube.com/watch?v=DrhMItWQLTw)
-
-
-## ofPolylineStudy
-
-ofPolylineの勉強。
-
-[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/ofPolylineStudy)
-
-[![](https://img.youtube.com/vi/LjPoN09fwPQ/0.jpg)](https://www.youtube.com/watch?v=LjPoN09fwPQ)
 
 
 ## daySphere
