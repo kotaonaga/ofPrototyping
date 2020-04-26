@@ -39,7 +39,6 @@ void ofApp::update(){
         trail[1].addVertex(x,y[1]);
         trail[2].addVertex(x,y[2]);
     }
-    
     /*
      (t * 120は速度。1秒間にどれだけ進むか)
      1000 - 200 = 800これで割ったあまりは？

@@ -21,7 +21,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-    vector<ofPolyline> trail; //ofPolyline型の可変長配列を宣言。
+    vector<ofPolyline> trail;
     float x, prevX;
     vector<float> y;
     
