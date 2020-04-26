@@ -39,7 +39,7 @@ AIカウンセリングなどコンピュータに「励まされる」ことに
 
 ## ofPolylineStudy
 
-ofPolylineの勉強。
+着々と伸びる線
 
 [ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/ofPolylineStudy)
 
