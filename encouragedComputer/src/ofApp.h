@@ -6,7 +6,6 @@
 #include "Chat.hpp"
 #include "Face.hpp"
 #include "Tear.hpp"
-#include "Button.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -32,7 +31,6 @@ class ofApp : public ofBaseApp{
     
     Face face;
     Chat chat;
-    Button button;
     
     int textMode = 0;
     int faceMode = 0;
