@@ -6,7 +6,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetLineWidth(10);
     
-    shader.load("shader");
+//    shader.load("shader");
     ofSetWindowShape(800, 800);
 //    face.setFaceWidth(chat.getChatWidth());
 //    chat.setPos(face.getFaceWidth());
@@ -26,23 +26,24 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    if(faceMode == 0){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
-    }else if(faceMode == 1){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
-    }else if(faceMode == 2){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
-    }else if(faceMode == 3){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
-    }else if(faceMode == 4){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
-    }else{
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
-    }
+//    if(faceMode == 0){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
+//    }else if(faceMode == 1){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
+//    }else if(faceMode == 2){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
+//    }else if(faceMode == 3){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
+//    }else if(faceMode == 4){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
+//    }else{
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
+//    }
     
-    shader.begin();
-    shader.setUniform1f("u_hue", hue);
-    shader.end();
+    face.update();
+//    shader.begin();
+//    shader.setUniform1f("u_hue", hue);
+//    shader.end();
     
     for(int i = 0; i < rightTears.size(); i++){
         rightTears[i].fallRight();
@@ -55,9 +56,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    shader.begin();
+//    shader.begin();
     face.draw();
-    shader.end();
+//    shader.end();
 //    face.drawEyes();
     
 //

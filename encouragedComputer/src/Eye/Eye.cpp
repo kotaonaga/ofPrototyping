@@ -19,8 +19,7 @@ void Eye::draw(){
     ofSetLineWidth(10);
     ofSetCircleResolution(100);
     ofSetColor(34,5,58);
-    ofDrawCircle(56, 333, 340);
-    ofLog() << "hey this is my eye";
+    ofDrawCircle(56, 333, 100);
 //    if (ofGetElapsedTimeMillis() - Face::openedTime > 2500 && Face::isClosed == false) {
 //        Face::isClosed = true;
 //        Face::closedTime = ofGetElapsedTimeMillis();
