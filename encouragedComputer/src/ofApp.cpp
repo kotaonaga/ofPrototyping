@@ -60,57 +60,57 @@ void ofApp::draw(){
     shader.end();
 //    face.drawEyes();
     
-    
-    if(faceMode == 0){
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 240){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-        
-        for(int i = 0; i < leftTears.size(); i++){
-            if(leftTears[i].getFallPosLeft() == 240){
-                Tear t;
-                t.setupLeft();
-                leftTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 1){
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 660){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-        
-        for(int i = 0; i < leftTears.size(); i++){
-            if(leftTears[i].getFallPosLeft() == 660){
-                Tear t;
-                t.setupLeft();
-                leftTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 2){
-        leftTears.clear();
-        
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 540){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 3){
-        rightTears.clear();
-    }else{
-        img.draw(0,0);
-    }
+//
+//    if(faceMode == 0){
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 240){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//
+//        for(int i = 0; i < leftTears.size(); i++){
+//            if(leftTears[i].getFallPosLeft() == 240){
+//                Tear t;
+//                t.setupLeft();
+//                leftTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 1){
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 660){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//
+//        for(int i = 0; i < leftTears.size(); i++){
+//            if(leftTears[i].getFallPosLeft() == 660){
+//                Tear t;
+//                t.setupLeft();
+//                leftTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 2){
+//        leftTears.clear();
+//
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 540){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 3){
+//        rightTears.clear();
+//    }else{
+//        img.draw(0,0);
+//    }
     
     for(int i = 0; i < rightTears.size(); i++){
         rightTears[i].drawRight();

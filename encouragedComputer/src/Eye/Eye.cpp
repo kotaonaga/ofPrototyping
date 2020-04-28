@@ -18,17 +18,19 @@ void Eye::update(){
 void Eye::draw(){
     ofSetLineWidth(10);
     ofSetCircleResolution(100);
-    
+    ofSetColor(34,5,58);
+    ofDrawCircle(56, 333, 340);
+    ofLog() << "hey this is my eye";
 //    if (ofGetElapsedTimeMillis() - Face::openedTime > 2500 && Face::isClosed == false) {
 //        Face::isClosed = true;
 //        Face::closedTime = ofGetElapsedTimeMillis();
 //    }
-//    
+//
 //    if (ofGetElapsedTimeMillis() - Face::closedTime > 300 && isClosed == true) {
 //        isClosed = false;
 //        openedTime = ofGetElapsedTimeMillis();
 //    }
-//    
+//
 //    if (isClosed == false) {
 //        ofSetColor(255);
 //        ofDrawCircle(ofGetWidth() * 1/3, ofGetHeight()/3, eyeSize/2);
