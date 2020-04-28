@@ -9,5 +9,16 @@
 #define Eye_hpp
 
 #include <stdio.h>
+#include "ofMain.h"
 
+class Eye{
+private:
+    
+public:
+    Eye();
+    void update();
+    void draw();
+    
+    
+};
 #endif /* Eye_hpp */

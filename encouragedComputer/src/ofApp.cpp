@@ -58,7 +58,7 @@ void ofApp::draw(){
     shader.begin();
     face.drawSkin();
     shader.end();
-    face.drawEyes();
+//    face.drawEyes();
     
     
     if(faceMode == 0){
