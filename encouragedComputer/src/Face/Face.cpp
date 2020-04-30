@@ -8,7 +8,7 @@ int Face::faceWidth = 0;
 
 Face::Face(){
     shader.load("shader");
-//    facemode = depression;
+    img.load("smile.png");
 }
 
 void Face::setFaceWidth(int _chatWidth){
@@ -28,7 +28,7 @@ int Face::getFaceMode(){
 }
 
 void Face::goNextFaceMode(){
-//    facemode++;
+    //もともとfaceMode++で実装していた。なんかもっとうまい書き方がありそう。
     switch(facemode){
         case depression:
             facemode = superCry;
@@ -73,6 +73,7 @@ void Face::drawEyes(){
           ofLine(ofGetWidth() * 2/3 - (eyeSize * 2/3), ofGetHeight()/3, ofGetWidth() * 2/3 + (eyeSize * 2/3), ofGetHeight()/3);
       }
 }
+
 void Face::update(){
         if(facemode == depression){
             hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;

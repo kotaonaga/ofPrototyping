@@ -17,11 +17,13 @@ private:
     float hue = 0.0;
     ofShader shader;
     
+    //顔系
     enum Facemode
     {
         depression, superCry, cry, normal, smile
     };
     Facemode facemode;
+    ofImage img;
     
 public:
     Face();
