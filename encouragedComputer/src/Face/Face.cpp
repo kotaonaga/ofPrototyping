@@ -93,6 +93,7 @@ void Face::update(){
         shader.setUniform1f("u_hue", hue);
         shader.end();
     
+    eye.update();
 }
 
 

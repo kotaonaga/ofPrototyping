@@ -15,22 +15,32 @@ Eye::Eye(){
 }
 
 void Eye::update(){
+    if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
+        isClosed = true;
+        closedTime = ofGetElapsedTimeMillis();
+    }
     
+    if (ofGetElapsedTimeMillis() - closedTime > 300 && isClosed == true) {
+           isClosed = false;
+           openedTime = ofGetElapsedTimeMillis();
+       }
+    
+
 }
 
 void Eye::draw(){
     ofSetLineWidth(10);
     ofSetCircleResolution(100);
 
-    if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
-        isClosed = true;
-        closedTime = ofGetElapsedTimeMillis();
-    }
+//    if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
+//        isClosed = true;
+//        closedTime = ofGetElapsedTimeMillis();
+//    }
 
-    if (ofGetElapsedTimeMillis() - closedTime > 300 && isClosed == true) {
-        isClosed = false;
-        openedTime = ofGetElapsedTimeMillis();
-    }
+//    if (ofGetElapsedTimeMillis() - closedTime > 300 && isClosed == true) {
+//        isClosed = false;
+//        openedTime = ofGetElapsedTimeMillis();
+//    }
 
     if (isClosed == false) {
         ofSetColor(255);
