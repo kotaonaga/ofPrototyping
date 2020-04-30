@@ -6,7 +6,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetLineWidth(10);
     
-    shader.load("shader");
+//    shader.load("shader");
     ofSetWindowShape(800, 800);
 //    face.setFaceWidth(chat.getChatWidth());
 //    chat.setPos(face.getFaceWidth());
@@ -25,24 +25,25 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    if(faceMode == 0){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
-    }else if(faceMode == 1){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
-    }else if(faceMode == 2){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
-    }else if(faceMode == 3){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
-    }else if(faceMode == 4){
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
-    }else{
-        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
-    }
+//    if(faceMode == 0){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
+//    }else if(faceMode == 1){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
+//    }else if(faceMode == 2){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
+//    }else if(faceMode == 3){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
+//    }else if(faceMode == 4){
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
+//    }else{
+//        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
+//    }
     
 //    face.update();
-    shader.begin();
-    shader.setUniform1f("u_hue", hue);
-    shader.end();
+//    shader.begin();
+//    shader.setUniform1f("u_hue", hue);
+//    shader.end();
+    face.update();
     
     for(int i = 0; i < rightTears.size(); i++){
         rightTears[i].fallRight();
@@ -56,62 +57,62 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    shader.begin();
+//    shader.begin();
     face.draw();
-    shader.end();
+//    shader.end();
     face.drawEyes();
+//涙系なのでいったんコメントアウト
     
-
-    if(faceMode == 0){
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 240){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-
-        for(int i = 0; i < leftTears.size(); i++){
-            if(leftTears[i].getFallPosLeft() == 240){
-                Tear t;
-                t.setupLeft();
-                leftTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 1){
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 660){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-
-        for(int i = 0; i < leftTears.size(); i++){
-            if(leftTears[i].getFallPosLeft() == 660){
-                Tear t;
-                t.setupLeft();
-                leftTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 2){
-        leftTears.clear();
-
-        for(int i = 0; i < rightTears.size(); i++){
-            if(rightTears[i].getFallPosRight() == 540){
-                cout << rightTears[0].getFallPosRight() << endl;
-                Tear t;
-                t.setupRight();
-                rightTears.push_back(t);
-            }
-        }
-    }else if(faceMode == 3){
-        rightTears.clear();
-    }else{
-        img.draw(0,0);
-    }
+//    if(faceMode == 0){
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 240){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//
+//        for(int i = 0; i < leftTears.size(); i++){
+//            if(leftTears[i].getFallPosLeft() == 240){
+//                Tear t;
+//                t.setupLeft();
+//                leftTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 1){
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 660){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//
+//        for(int i = 0; i < leftTears.size(); i++){
+//            if(leftTears[i].getFallPosLeft() == 660){
+//                Tear t;
+//                t.setupLeft();
+//                leftTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 2){
+//        leftTears.clear();
+//
+//        for(int i = 0; i < rightTears.size(); i++){
+//            if(rightTears[i].getFallPosRight() == 540){
+//                cout << rightTears[0].getFallPosRight() << endl;
+//                Tear t;
+//                t.setupRight();
+//                rightTears.push_back(t);
+//            }
+//        }
+//    }else if(faceMode == 3){
+//        rightTears.clear();
+//    }else{
+//        img.draw(0,0);
+//    }
     
     for(int i = 0; i < rightTears.size(); i++){
         rightTears[i].drawRight();
@@ -124,7 +125,8 @@ void ofApp::draw(){
     
     if(chat.getTextPos() > ofGetWidth()){
         textMode = 2;
-        faceMode++;
+//        faceMode++;
+        face.goNextFaceMode();
     }
     
     if(textMode == 0){
@@ -167,17 +169,17 @@ void ofApp::keyReleased(int key){
     }
     
     //debug
-    if(key == '0'){
-        faceMode = 0;
-    }else if(key == '1'){
-        faceMode = 1;
-    }else if(key == '2'){
-        faceMode = 2;
-    }else if(key == '3'){
-        faceMode = 3;
-    }else if(key == '4'){
-        faceMode = 4;
-    }
+//    if(key == '0'){
+//        face.setFaceMode(0);
+//    }else if(key == '1'){
+//        faceMode = 1;
+//    }else if(key == '2'){
+//        faceMode = 2;
+//    }else if(key == '3'){
+//        faceMode = 3;
+//    }else if(key == '4'){
+//        faceMode = 4;
+//    }
 }
 
 //--------------------------------------------------------------

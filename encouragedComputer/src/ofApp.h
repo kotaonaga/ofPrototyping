@@ -25,16 +25,16 @@ class ofApp : public ofBaseApp{
         void dragEvent(ofDragInfo dragInfo);
         void gotMessage(ofMessage msg);
     
-    ofShader shader;
+//    ofShader shader;
     ofImage img;
     
     Face face;
     Chat chat;
     
     int textMode = 0;
-    int faceMode = 0;
+//    int faceMode = 0;
     string textTyped;
-    float hue = 0.0;
+//    float hue = 0.0;
     
     Tear tear;
     vector<Tear> rightTears;

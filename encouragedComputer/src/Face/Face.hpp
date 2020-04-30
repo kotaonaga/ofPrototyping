@@ -13,7 +13,10 @@ private:
     static Boolean isClosed;
     static int eyeSize;
     static int faceWidth;
-    //    ofShader shader;
+    //シェーダー系
+    float hue = 0.0;
+    ofShader shader;
+    
     enum Facemode
     {
         depression, superCry, cry, normal, smile
@@ -24,8 +27,12 @@ public:
     Face();
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
+    //Facemode系
     void setFaceMode(Facemode _facemode);
     int getFaceMode();
+    void goNextFaceMode();
+    
+    void update();
     void draw();
     void drawEyes();
     
