@@ -15,24 +15,27 @@ Tear::Tear(){
 //    Tear leftTear;
 //    leftTear.setupLeft();
 //    leftTears.push_back(leftTear);
+    ofLog() << "Tear呼ばれた";
 }
 
 int Tear::getY(){
-    return y;
+//    return y;
 }
 
+//setupRight、setupLeftいらない。
 void Tear::setupRight(){
-    x = 0;
-    y = 0;
+//    x = 0;
+//    y = 0;
     nextRightPos = ofRandom(250, 350);
 }
 
 void Tear::setupLeft(){
-    x = 0;
-    y = 0;
+//    x = 0;
+//    y = 0;
     nextLeftPos = ofRandom(250, 350);
 }
 
+//getNextRightPosもいらない。
 int Tear::getNextRightPos(){
     return nextRightPos;
 }
@@ -41,14 +44,16 @@ int Tear::getNextLeftPos(){
     return nextLeftPos;
 }
 
-void Tear::fallRight(){
+//fallRightはupdateにしたい。update
+void Tear::updateFallRight(){
     fallPosRight += 3;
 }
 
-void Tear::fallLeft(){
+void Tear::updateFallLeft(){
     fallPosLeft += 3;
 }
 
+//FallPosRightが240になったら次が生まれる。
 int Tear::getFallPosRight(){
     return fallPosRight;
 }
@@ -57,6 +62,7 @@ int Tear::getFallPosLeft(){
     return fallPosLeft;
 }
 
+//これも使ってない。
 void Tear::resetFallPosRight(){
     fallPosRight = 0;
 }

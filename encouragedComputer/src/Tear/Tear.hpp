@@ -6,8 +6,8 @@
 
 class Tear{
 private:
-    int x = 0;
-    int y = 0;
+//    int x = 0;
+//    int y = 0;
     float r;
     int R = 50;
     int A = 6;
@@ -15,9 +15,9 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
-//    Tear tear;
-    vector<Tear> rightTears;
-    vector<Tear> leftTears;
+
+//    vector<Tear> rightTears;
+//    vector<Tear> leftTears;
     
 public:
     Tear();
@@ -26,8 +26,10 @@ public:
     void setupLeft();
     int getNextRightPos();
     int getNextLeftPos();
-    void fallRight();
-    void fallLeft();
+//    void fallRight();
+//    void fallLeft();
+    void updateFallRight();
+    void updateFallLeft();
     int getFallPosRight();
     int getFallPosLeft();
     void resetFallPosRight();

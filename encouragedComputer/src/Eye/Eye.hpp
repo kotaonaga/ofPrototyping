@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "Tear.hpp"
 
 class Eye{
 private:
@@ -17,6 +18,10 @@ private:
     int closedTime;
     Boolean isClosed;
     int eyeSize;
+    
+    //涙
+    vector<Tear> rightTears;
+    vector<Tear> leftTears;
     
 public:
     Eye();
