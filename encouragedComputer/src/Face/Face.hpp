@@ -24,7 +24,7 @@ public:
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     void draw();
-    void drawSkin();
+//    void drawSkin();
     void drawEyes();
     
 };
