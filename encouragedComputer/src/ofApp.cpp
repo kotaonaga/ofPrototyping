@@ -55,8 +55,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
     shader.begin();
-//    face.drawSkin();
     face.draw();
     shader.end();
     face.drawEyes();

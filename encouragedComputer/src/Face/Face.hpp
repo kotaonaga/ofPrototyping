@@ -13,7 +13,8 @@ private:
     static Boolean isClosed;
     static int eyeSize;
     static int faceWidth;
-    enum struct Facemode
+    //    ofShader shader;
+    enum Facemode
     {
         depression, superCry, cry, normal, smile
     };
@@ -23,8 +24,9 @@ public:
     Face();
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
+    void setFaceMode(Facemode _facemode);
+    int getFaceMode();
     void draw();
-//    void drawSkin();
     void drawEyes();
     
 };
