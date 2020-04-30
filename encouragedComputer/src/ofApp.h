@@ -4,6 +4,7 @@
 //#include "ofxGui.h"
 #include "Chat.hpp"
 #include "Face.hpp"
+#include "Eye.hpp"
 #include "Tear.hpp"
 
 class ofApp : public ofBaseApp{
@@ -29,6 +30,7 @@ class ofApp : public ofBaseApp{
     
     Face face;
     Chat chat;
+//    Eye eye;
     
     int textMode = 0;
     string textTyped;

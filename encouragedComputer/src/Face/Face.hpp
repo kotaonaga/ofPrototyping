@@ -3,15 +3,16 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "Eye.hpp"
 
 class Face{
 private:
     int mode;
-    
-    static int openedTime;
-    static int closedTime;
-    static Boolean isClosed;
-    static int eyeSize;
+//
+//    static int openedTime;
+//    static int closedTime;
+//    static Boolean isClosed;
+//    static int eyeSize;
     static int faceWidth;
     //シェーダー系
     float hue = 0.0;
@@ -24,6 +25,7 @@ private:
     };
     Facemode facemode;
     ofImage img;
+    Eye eye;
     
 public:
     Face();

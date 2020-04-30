@@ -13,6 +13,10 @@
 
 class Eye{
 private:
+    int openedTime;
+    int closedTime;
+    Boolean isClosed;
+    int eyeSize;
     
 public:
     Eye();

@@ -38,7 +38,8 @@ void ofApp::update(){
 void ofApp::draw(){
     
     face.draw();
-    face.drawEyes();
+//    eye.draw();
+//    face.drawEyes();
 //涙系なのでいったんコメントアウト
     
 //    if(faceMode == 0){
