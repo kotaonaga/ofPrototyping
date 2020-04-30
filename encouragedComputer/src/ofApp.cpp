@@ -12,27 +12,11 @@ void ofApp::setup(){
 //    gui.add(rSlider.setup("R",50, 0, 500));
 //    gui.add(aSlider.setup("a",6, 0, 30));
 //
-    
-//    Tear rightTear;
-//    rightTear.setupRight();
-//    rightTears.push_back(rightTear);
-//
-//    Tear leftTear;
-//    leftTear.setupLeft();
-//    leftTears.push_back(leftTear);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     face.update();
-    
-//    for(int i = 0; i < rightTears.size(); i++){
-//        rightTears[i].fallRight();
-//    }
-//    
-//    for(int i = 0; i < leftTears.size(); i++){
-//        leftTears[i].fallLeft();
-//    }
 }
 
 //--------------------------------------------------------------
@@ -91,14 +75,6 @@ void ofApp::draw(){
 //    }else{
 //        img.draw(0,0);
 //    }
-    
-//    for(int i = 0; i < rightTears.size(); i++){
-//        rightTears[i].drawRight();
-//    }
-//
-//    for(int i = 0; i < leftTears.size(); i++){
-//            leftTears[i].drawLeft();
-//        }
 
     
     if(chat.getTextPos() > ofGetWidth()){

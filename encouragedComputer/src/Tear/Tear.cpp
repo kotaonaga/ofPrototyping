@@ -15,7 +15,8 @@ Tear::Tear(){
 //    Tear leftTear;
 //    leftTear.setupLeft();
 //    leftTears.push_back(leftTear);
-    ofLog() << "Tear呼ばれた";
+//    ofLog() << face.getFaceMode();
+    
 }
 
 int Tear::getY(){
@@ -23,17 +24,17 @@ int Tear::getY(){
 }
 
 //setupRight、setupLeftいらない。
-void Tear::setupRight(){
-//    x = 0;
-//    y = 0;
-    nextRightPos = ofRandom(250, 350);
-}
-
-void Tear::setupLeft(){
-//    x = 0;
-//    y = 0;
-    nextLeftPos = ofRandom(250, 350);
-}
+//void Tear::setupRight(){
+////    x = 0;
+////    y = 0;
+//    nextRightPos = ofRandom(250, 350);
+//}
+//
+//void Tear::setupLeft(){
+////    x = 0;
+////    y = 0;
+//    nextLeftPos = ofRandom(250, 350);
+//}
 
 //getNextRightPosもいらない。
 int Tear::getNextRightPos(){

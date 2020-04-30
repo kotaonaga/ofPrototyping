@@ -2,10 +2,11 @@
 
 
 int Face::faceWidth = 0;
+//Facemode Face::facemode = depression;
 
 Face::Face(){
     shader.load("shader");
-    img.load("smile.png");
+    smileMouse.load("smile.png");
     Eye();
 }
 

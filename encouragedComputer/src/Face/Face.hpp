@@ -19,11 +19,13 @@ private:
         depression, superCry, cry, normal, smile
     };
     Facemode facemode;
-    ofImage img;
+    ofImage smileMouse;
     Eye eye;
     
 public:
     Face();
+    
+    
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     //Facemode系

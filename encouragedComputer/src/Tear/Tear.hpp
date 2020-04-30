@@ -4,10 +4,9 @@
 #include <stdio.h>
 #include "ofMain.h"
 
+
 class Tear{
 private:
-//    int x = 0;
-//    int y = 0;
     float r;
     int R = 50;
     int A = 6;
@@ -15,19 +14,15 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
-
-//    vector<Tear> rightTears;
-//    vector<Tear> leftTears;
+//    Face face;
     
 public:
     Tear();
     int getY();
-    void setupRight();
-    void setupLeft();
+//    void setupRight();
+//    void setupLeft();
     int getNextRightPos();
     int getNextLeftPos();
-//    void fallRight();
-//    void fallLeft();
     void updateFallRight();
     void updateFallLeft();
     int getFallPosRight();
