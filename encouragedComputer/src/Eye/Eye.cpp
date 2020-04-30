@@ -6,12 +6,14 @@
 //
 
 #include "Eye.hpp"
+#include "Tear.hpp"
 
 Eye::Eye(){
     openedTime = 0;
     closedTime = 0;
     isClosed = false;
     eyeSize = 60;
+//    Tear();
 }
 
 void Eye::update(){

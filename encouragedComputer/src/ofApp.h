@@ -35,9 +35,9 @@ class ofApp : public ofBaseApp{
     int textMode = 0;
     string textTyped;
     
-    Tear tear;
-    vector<Tear> rightTears;
-    vector<Tear> leftTears;
+//    Tear tear;
+//    vector<Tear> rightTears;
+//    vector<Tear> leftTears;
     
 //    ofxPanel gui;
 //    ofxIntSlider rSlider;

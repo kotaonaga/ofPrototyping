@@ -15,6 +15,9 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
+//    Tear tear;
+    vector<Tear> rightTears;
+    vector<Tear> leftTears;
     
 public:
     Tear();

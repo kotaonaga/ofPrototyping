@@ -6,6 +6,7 @@ int Face::faceWidth = 0;
 Face::Face(){
     shader.load("shader");
     img.load("smile.png");
+    Eye();
 }
 
 void Face::setFaceWidth(int _chatWidth){
@@ -72,22 +73,6 @@ void Face::update(){
 void Face::draw(){
     shader.begin();
     ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-//    if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {
-//        isClosed = true;
-//        closedTime = ofGetElapsedTimeMillis();
-//    }
-//
-//    if (ofGetElapsedTimeMillis() - closedTime > 300 && isClosed == true) {
-//        isClosed = false;
-//        openedTime = ofGetElapsedTimeMillis();
-//    }
-//
-//    if (isClosed == false) {
-//        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-//    } else {
-//        ofSetColor(255, 30, 255);
-//        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-//    }
     shader.end();
     eye.draw();
 }

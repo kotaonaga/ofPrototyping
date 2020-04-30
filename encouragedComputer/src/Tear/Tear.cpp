@@ -7,10 +7,14 @@
 
 #include "Tear.hpp"
 
-
-
 Tear::Tear(){
-    
+//    Tear rightTear;
+//    rightTear.setupRight();
+//    rightTears.push_back(rightTear);
+//
+//    Tear leftTear;
+//    leftTear.setupLeft();
+//    leftTears.push_back(leftTear);
 }
 
 int Tear::getY(){
