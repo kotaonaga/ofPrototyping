@@ -13,6 +13,11 @@ private:
     static Boolean isClosed;
     static int eyeSize;
     static int faceWidth;
+    enum struct Facemode
+    {
+        depression, superCry, cry, normal, smile
+    };
+    Facemode facemode;
     
 public:
     Face();

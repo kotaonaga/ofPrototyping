@@ -10,8 +10,6 @@ void ofApp::setup(){
     ofSetWindowShape(800, 800);
 //    face.setFaceWidth(chat.getChatWidth());
 //    chat.setPos(face.getFaceWidth());
-    
-    
 //    gui.setup();
 //    gui.add(rSlider.setup("R",50, 0, 500));
 //    gui.add(aSlider.setup("a",6, 0, 30));
