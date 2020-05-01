@@ -6,6 +6,7 @@
 //
 
 #include "Tear.hpp"
+//#include "Face.hpp"
 
 Tear::Tear(){
 //    Tear rightTear;
@@ -16,7 +17,6 @@ Tear::Tear(){
 //    leftTear.setupLeft();
 //    leftTears.push_back(leftTear);
 //    ofLog() << face.getFaceMode();
-    
 }
 
 int Tear::getY(){
@@ -35,6 +35,9 @@ int Tear::getY(){
 ////    y = 0;
 //    nextLeftPos = ofRandom(250, 350);
 //}
+void Tear::testLog(){
+//    ofLog() << face->facemode;
+}
 
 //getNextRightPosもいらない。
 int Tear::getNextRightPos(){

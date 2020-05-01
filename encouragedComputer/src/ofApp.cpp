@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-//    img.load("smile.png");
     ofSetVerticalSync(true);
     ofSetLineWidth(10);
     ofSetWindowShape(800, 800);

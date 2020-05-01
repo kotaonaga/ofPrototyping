@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "ofMain.h"
 
+//class Face;
 
 class Tear{
 private:
@@ -14,13 +15,14 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
-//    Face face;
+//    Face* facePtr;
     
 public:
     Tear();
     int getY();
 //    void setupRight();
 //    void setupLeft();
+    void testLog();
     int getNextRightPos();
     int getNextLeftPos();
     void updateFallRight();

@@ -5,6 +5,7 @@
 #include "ofMain.h"
 #include "Eye.hpp"
 
+
 class Face{
 private:
     int mode;
@@ -12,27 +13,28 @@ private:
     //シェーダー系
     float hue = 0.0;
     ofShader shader;
+    ofImage smileMouse;
+    Eye eye;
     
-    //顔系
+public:
+    //Facemodeがpublicは望ましくない気がする。
     enum Facemode
     {
         depression, superCry, cry, normal, smile
     };
     Facemode facemode;
-    ofImage smileMouse;
-    Eye eye;
     
-public:
     Face();
-    
-    
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     //Facemode系
     void setFaceMode(Facemode _facemode);
-    int getFaceMode();
+//    Facemode getFaceMode();
+//    int getFaceMode();
     void goNextFaceMode();
     
+    
+    int testGetInt();
     void update();
     void draw();
     

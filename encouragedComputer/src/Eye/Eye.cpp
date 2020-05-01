@@ -38,6 +38,8 @@ void Eye::update(){
         for(int i = 0; i < leftTears.size(); i++){
             leftTears[i].updateFallLeft();
         }
+    
+    t.testLog();
 }
 
 void Eye::draw(){
@@ -62,3 +64,8 @@ void Eye::draw(){
                 leftTears[i].drawLeft();
     }
 }
+//
+//void Eye::setFaceMode(int _facemode){
+//    facemode = _facemode;
+//}
+//

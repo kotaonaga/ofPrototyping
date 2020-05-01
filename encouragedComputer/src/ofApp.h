@@ -26,11 +26,8 @@ class ofApp : public ofBaseApp{
         void dragEvent(ofDragInfo dragInfo);
         void gotMessage(ofMessage msg);
     
-//    ofImage img;
-    
     Face face;
     Chat chat;
-//    Eye eye;
     
     int textMode = 0;
     string textTyped;

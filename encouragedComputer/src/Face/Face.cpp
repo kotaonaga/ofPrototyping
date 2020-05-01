@@ -22,9 +22,13 @@ void Face::setFaceMode(Facemode _facemode){
     facemode = _facemode;
 }
 
-int Face::getFaceMode(){
-    return facemode;
-}
+//int Face::getFaceMode(){
+//    return (int) facemode;
+//}
+//
+//Facemode Face::getFaceMode(){
+//
+//}
 
 void Face::goNextFaceMode(){
     //もともとfaceMode++で実装していた。なんかもっとうまい書き方がありそう。
@@ -76,4 +80,8 @@ void Face::draw(){
     ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     shader.end();
     eye.draw();
+}
+
+int Face::testGetInt(){
+    return 3;
 }

@@ -19,15 +19,25 @@ private:
     Boolean isClosed;
     int eyeSize;
     
+    //顔系。ここにもFacemodeを作るのはよろしくない気がする。
+//    enum Facemode
+//    {
+//        depression, superCry, cry, normal, smile
+//    };
+//    Facemode facemode;
+    
     //涙
     vector<Tear> rightTears;
     vector<Tear> leftTears;
+    
+    //log用。消していい。
+    Tear t;
     
 public:
     Eye();
     void update();
     void draw();
-    
+    void setFaceMode(int _facemode);
     
 };
 #endif /* Eye_hpp */

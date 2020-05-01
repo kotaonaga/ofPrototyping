@@ -12,6 +12,7 @@ private:
     static string displayedText;
     static int textPos;
     
+    
 public:
     Chat();
     int getChatWidth();
