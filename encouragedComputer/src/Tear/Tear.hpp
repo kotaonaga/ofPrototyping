@@ -15,13 +15,11 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
-//    Face* facePtr;
+//    Face* face;
     
 public:
     Tear();
     int getY();
-//    void setupRight();
-//    void setupLeft();
     void testLog();
     int getNextRightPos();
     int getNextLeftPos();

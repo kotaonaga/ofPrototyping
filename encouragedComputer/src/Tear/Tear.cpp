@@ -23,18 +23,7 @@ int Tear::getY(){
 //    return y;
 }
 
-//setupRight、setupLeftいらない。
-//void Tear::setupRight(){
-////    x = 0;
-////    y = 0;
-//    nextRightPos = ofRandom(250, 350);
-//}
-//
-//void Tear::setupLeft(){
-////    x = 0;
-////    y = 0;
-//    nextLeftPos = ofRandom(250, 350);
-//}
+//↓これのコメントアウトを外してEyeから呼び出すとExc_bad_accessが出る。
 void Tear::testLog(){
 //    ofLog() << face->facemode;
 }
