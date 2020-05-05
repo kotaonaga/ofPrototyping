@@ -12,8 +12,8 @@ Face::Face(){
 }
 
 void Face::draw(){
-    if(faceModePtr->getFaceMode() == faceModeController::sad){
-        ofLog() << "sad face";
-    }
-    faceModePtr->testLog();
+//    if(faceModePtr->getFaceMode() == faceModeController::sad){
+//        ofLog() << "sad face";
+//    }
+    faceModePtr->testLog(); //testLog()はしっかり表示される。
 }
