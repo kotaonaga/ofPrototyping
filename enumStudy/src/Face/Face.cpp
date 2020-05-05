@@ -12,7 +12,7 @@ Face::Face(){
 }
 
 void Face::draw(){
-    if(faceModePtr->facemode == faceModeController::sad){
+    if(faceModePtr->getFaceMode() == faceModeController::sad){
         ofLog() << "sad face";
     }
     faceModePtr->testLog();
