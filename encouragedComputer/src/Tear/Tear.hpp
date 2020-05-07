@@ -22,7 +22,6 @@ public:
     };
     void dump();
     int getY();
-    void testLog();
     int getNextRightPos();
     int getNextLeftPos();
     void updateFallRight();

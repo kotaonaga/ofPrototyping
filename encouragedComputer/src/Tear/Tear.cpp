@@ -26,10 +26,6 @@ int Tear::getY(){
 //    return y;
 }
 
-//↓これのコメントアウトを外してEyeから呼び出すとExc_bad_accessが出る。
-void Tear::testLog(){
-//    ofLog() << face->facemode;
-}
 
 //getNextRightPosもいらない。
 int Tear::getNextRightPos(){

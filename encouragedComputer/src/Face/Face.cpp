@@ -1,21 +1,22 @@
 #include "Face.hpp"
 
 
-int Face::faceWidth = 0;
-
-//Face::Face(){
-////    shader.load("shader");
-////    smileMouse.load("smile.png");
-////    Eye();
-//}
-
-void Face::setFaceWidth(int _chatWidth){
-    faceWidth = ofGetWidth() - _chatWidth;
+Face::Face(){
+    shader.load("shader");
+    smileMouse.load("smile.png");
+    
+    mode = make_shared<Globals::Mode>();
+    *mode = Globals::Mode::depression;
+    eye = make_unique<Eye>(mode);
+//    Eye();
 }
 
-int Face::getFaceWidth(){
-    return faceWidth;
+
+void Face::dump(){
+    Globals::dump_mode("Face", mode);
+    eye->dump();
 }
+
 
 void Face::randomize(){
     vector<int> rdm = {0, 1, 2, 3, 4};
@@ -32,18 +33,6 @@ void Face::randomize(){
         *mode = Globals::Mode::smile;
         
 }
-//
-//void Face::setFaceMode(Facemode _facemode){
-//    facemode = _facemode;
-//}
-
-//int Face::getFaceMode(){
-//    return (int) facemode;
-//}
-//
-//Facemode Face::getFaceMode(){
-//
-//}
 
 void Face::goNextFaceMode(){
     //もともとfaceMode++で実装していた。なんかもっとうまい書き方がありそう。
@@ -95,9 +84,4 @@ void Face::draw(){
     ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     shader.end();
 //    eye.draw();
-}
-
-void Face::dump(){
-    Globals::dump_mode("Face", mode);
-    eye->dump();
 }

@@ -62,8 +62,3 @@ void Eye::draw(){
                 leftTears[i].drawLeft();
     }
 }
-//
-//void Eye::setFaceMode(int _facemode){
-//    facemode = _facemode;
-//}
-//
