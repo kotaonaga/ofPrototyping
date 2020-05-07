@@ -3,8 +3,7 @@
 
 #include <stdio.h>
 #include "ofMain.h"
-
-//class Face;
+#include "Globals.hpp"
 
 class Tear{
 private:
@@ -15,10 +14,13 @@ private:
     int fallPosLeft = 0;
     int nextRightPos = 0;
     int nextLeftPos = 0;
-//    Face* face;
+    shared_ptr<Globals::Mode> mode;
     
 public:
-    Tear();
+    Tear(shared_ptr<Globals::Mode> _mode) :mode(_mode){
+        
+    };
+    void dump();
     int getY();
     void testLog();
     int getNextRightPos();

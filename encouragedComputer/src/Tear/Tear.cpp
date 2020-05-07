@@ -8,17 +8,20 @@
 #include "Tear.hpp"
 //#include "Face.hpp"
 
-Tear::Tear(){
-//    Tear rightTear;
-//    rightTear.setupRight();
-//    rightTears.push_back(rightTear);
-//
-//    Tear leftTear;
-//    leftTear.setupLeft();
-//    leftTears.push_back(leftTear);
-//    ofLog() << face.getFaceMode();
-}
+//Tear::Tear(){
+////    Tear rightTear;
+////    rightTear.setupRight();
+////    rightTears.push_back(rightTear);
+////
+////    Tear leftTear;
+////    leftTear.setupLeft();
+////    leftTears.push_back(leftTear);
+////    ofLog() << face.getFaceMode();
+//}
 
+void Tear::dump(){
+    Globals::dump_mode("Tear", mode);
+}
 int Tear::getY(){
 //    return y;
 }

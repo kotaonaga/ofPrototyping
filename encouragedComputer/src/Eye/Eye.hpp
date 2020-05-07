@@ -19,22 +19,21 @@ private:
     int closedTime;
     Boolean isClosed;
     int eyeSize;
-    shared_ptr<Globals::Mode> mode;
     
     //涙
     vector<Tear> rightTears;
     vector<Tear> leftTears;
     
-    //log用。消していい。
-    Tear t;
+    shared_ptr<Globals::Mode> mode;
+    unique_ptr<Tear> tear;
     
 public:
     Eye(shared_ptr<Globals::Mode> _mode) : mode(_mode){
-        
+        tear = make_unique<Tear>(mode);
     };
     void dump(){
         Globals::dump_mode("Eye", mode);
-//        tear->dump();
+        tear->dump();
     }
     void update();
     void draw();

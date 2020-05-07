@@ -2,7 +2,6 @@
 
 
 int Face::faceWidth = 0;
-//Facemode Face::facemode = depression;
 
 //Face::Face(){
 ////    shader.load("shader");
@@ -98,6 +97,7 @@ void Face::draw(){
 //    eye.draw();
 }
 
-int Face::testGetInt(){
-    return 3;
+void Face::dump(){
+    Globals::dump_mode("Face", mode);
+    eye->dump();
 }

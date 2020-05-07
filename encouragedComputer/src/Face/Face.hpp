@@ -30,6 +30,7 @@ public:
     shared_ptr<Globals::Mode> mode;
     unique_ptr<Eye> eye;
     
+    void dump();
     void randomize();
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
@@ -39,8 +40,6 @@ public:
     //    int getFaceMode();
     void goNextFaceMode();
     
-    
-    int testGetInt();
     void update();
     void draw();
     
