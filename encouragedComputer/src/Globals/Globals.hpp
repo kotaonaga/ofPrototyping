@@ -6,38 +6,28 @@
 //
 #pragma once
 
-#ifndef Globals_hpp
-#define Globals_hpp
-
-#include <stdio.h>
 #include "ofMain.h"
 
-//namespace Globals {
-////enum test{
-////    sad, normal, happy
-////};
-//struct Test{
-//    int hey;
-//};
-
-struct Test{
-    enum Mode{
-        sad, normal, happy
-    };
-    Mode mode;
-    
-//    int hey = 12;
-    
-//    void dumpMode(){
-//        ofLog() << mode;
-//    }
-    
-    void dumpMode(){
-        ofLog() << "hello";
-//        ofLog() << hey;
-    }
-    
-    
+namespace Globals {
+enum struct Mode{
+    depression,
+    superCry,
+    cry,
+    normal,
+    smile
 };
 
-#endif /* Globals_hpp */
+static void dump_mode(const string _class_name, shared_ptr<Mode> _mode){
+    if (*_mode == Mode::depression)
+        ofLogNotice(_class_name) << "depression";
+    else if (*_mode == Mode::superCry)
+        ofLogNotice(_class_name) << "superCry";
+    else if (*_mode == Mode::cry)
+        ofLogNotice(_class_name) << "cry";
+    else if (*_mode == Mode::normal)
+        ofLogNotice(_class_name) << "normal";
+    else if (*_mode == Mode::smile)
+        ofLogNotice(_class_name) << "smile";
+}
+
+};

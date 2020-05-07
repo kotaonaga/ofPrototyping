@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "Globals.hpp"
 #include "Tear.hpp"
 
 class Eye{
@@ -18,7 +19,7 @@ private:
     int closedTime;
     Boolean isClosed;
     int eyeSize;
-    
+    shared_ptr<Globals::Mode> mode;
     //顔系。ここにもFacemodeを作るのはよろしくない気がする。
 //    enum Facemode
 //    {
@@ -34,7 +35,9 @@ private:
     Tear t;
     
 public:
-    Eye();
+    Eye(shared_ptr<Globals::Mode> _mode) : mode(_mode){
+        
+    };
     void update();
     void draw();
     void setFaceMode(int _facemode);

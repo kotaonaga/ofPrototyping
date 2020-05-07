@@ -7,18 +7,18 @@
 
 #include "Eye.hpp"
 
-Eye::Eye(){
-    openedTime = 0;
-    closedTime = 0;
-    isClosed = false;
-    eyeSize = 60;
-    
-    Tear rightTear;
-    rightTears.push_back(rightTear);
-    
-    Tear leftTear;
-    leftTears.push_back(leftTear);
-}
+//Eye::Eye(){
+//    openedTime = 0;
+//    closedTime = 0;
+//    isClosed = false;
+//    eyeSize = 60;
+//    
+//    Tear rightTear;
+//    rightTears.push_back(rightTear);
+//    
+//    Tear leftTear;
+//    leftTears.push_back(leftTear);
+//}
 
 void Eye::update(){
     if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {

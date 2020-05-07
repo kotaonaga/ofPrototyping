@@ -3,34 +3,43 @@
 
 #include <stdio.h>
 #include "ofMain.h"
+#include "Globals.hpp"
 #include "Eye.hpp"
 
 
 class Face{
 private:
-    int mode;
     static int faceWidth;
     //シェーダー系
     float hue = 0.0;
     ofShader shader;
     ofImage smileMouse;
-    Eye eye;
+//    Eye eye;
     
 public:
     //Facemodeがpublicは望ましくない気がする。
-    enum Facemode
-    {
-        depression, superCry, cry, normal, smile
+//    enum Facemode
+//    {
+//        depression, superCry, cry, normal, smile
+//    };
+//    Facemode facemode;
+//
+    Face(){
+        ofLog() << "Faceが呼ばれたよ";
+        mode = make_shared<Globals::Mode>();
+        *mode = Globals::Mode::depression;
+        eye = make_unique<Eye>(mode);
     };
-    Facemode facemode;
     
-    Face();
+    shared_ptr<Globals::Mode> mode;
+    unique_ptr<Eye> eye;
+    
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     //Facemode系
-    void setFaceMode(Facemode _facemode);
-//    Facemode getFaceMode();
-//    int getFaceMode();
+//    void setFaceMode(Facemode _facemode);
+    //    Facemode getFaceMode();
+    //    int getFaceMode();
     void goNextFaceMode();
     
     
