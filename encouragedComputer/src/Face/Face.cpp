@@ -17,6 +17,22 @@ void Face::setFaceWidth(int _chatWidth){
 int Face::getFaceWidth(){
     return faceWidth;
 }
+
+void Face::randomize(){
+    vector<int> rdm = {0, 1, 2, 3, 4};
+    ofRandomize(rdm);
+    if (rdm.front() == 0)
+        *mode = Globals::Mode::depression;
+    else if (rdm.front() == 1)
+        *mode = Globals::Mode::superCry;
+    else if (rdm.front() == 2)
+        *mode = Globals::Mode::cry;
+    else if (rdm.front() == 3)
+        *mode = Globals::Mode::normal;
+    else if (rdm.front() == 4)
+        *mode = Globals::Mode::smile;
+        
+}
 //
 //void Face::setFaceMode(Facemode _facemode){
 //    facemode = _facemode;

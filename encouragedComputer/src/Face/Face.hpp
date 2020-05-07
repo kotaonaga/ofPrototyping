@@ -17,23 +17,20 @@ private:
 //    Eye eye;
     
 public:
-    //Facemodeがpublicは望ましくない気がする。
-//    enum Facemode
-//    {
-//        depression, superCry, cry, normal, smile
-//    };
-//    Facemode facemode;
-//
+    //TODO: この処理cppで書いた方が良さそう。
     Face(){
         ofLog() << "Faceが呼ばれたよ";
         mode = make_shared<Globals::Mode>();
+//        ofLog() << mode;
         *mode = Globals::Mode::depression;
+//        ofLog() << *mode;
         eye = make_unique<Eye>(mode);
     };
     
     shared_ptr<Globals::Mode> mode;
     unique_ptr<Eye> eye;
     
+    void randomize();
     void setFaceWidth(int _chatWidth);
     int getFaceWidth();
     //Facemode系

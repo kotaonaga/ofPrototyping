@@ -20,12 +20,6 @@ private:
     Boolean isClosed;
     int eyeSize;
     shared_ptr<Globals::Mode> mode;
-    //顔系。ここにもFacemodeを作るのはよろしくない気がする。
-//    enum Facemode
-//    {
-//        depression, superCry, cry, normal, smile
-//    };
-//    Facemode facemode;
     
     //涙
     vector<Tear> rightTears;
@@ -38,6 +32,10 @@ public:
     Eye(shared_ptr<Globals::Mode> _mode) : mode(_mode){
         
     };
+    void dump(){
+        Globals::dump_mode("Eye", mode);
+//        tear->dump();
+    }
     void update();
     void draw();
     void setFaceMode(int _facemode);
