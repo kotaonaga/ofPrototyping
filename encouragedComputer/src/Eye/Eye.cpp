@@ -7,18 +7,25 @@
 
 #include "Eye.hpp"
 
-//Eye::Eye(){
-//    openedTime = 0;
-//    closedTime = 0;
-//    isClosed = false;
-//    eyeSize = 60;
-//    
+Eye::Eye(shared_ptr<Globals::Mode> _mode) :mode(_mode){
+    tear = make_unique<Tear>(mode);
+    
+    openedTime = 0;
+    closedTime = 0;
+    isClosed = false;
+    eyeSize = 60;
+    
 //    Tear rightTear;
 //    rightTears.push_back(rightTear);
-//    
+//
 //    Tear leftTear;
 //    leftTears.push_back(leftTear);
-//}
+}
+
+void Eye::dump(){
+    Globals::dump_mode("Eye", mode);
+    tear->dump();
+}
 
 void Eye::update(){
     if (ofGetElapsedTimeMillis() - openedTime > 2500 && isClosed == false) {

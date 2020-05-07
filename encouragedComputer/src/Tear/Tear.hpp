@@ -17,9 +17,7 @@ private:
     shared_ptr<Globals::Mode> mode;
     
 public:
-    Tear(shared_ptr<Globals::Mode> _mode) :mode(_mode){
-        
-    };
+    Tear(shared_ptr<Globals::Mode> _mode);
     void dump();
     int getY();
     int getNextRightPos();
