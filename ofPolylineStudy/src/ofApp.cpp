@@ -1,9 +1,14 @@
 #include "ofApp.h"
 
+//ポインタの練習
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowShape(1000, 800);
-
+    ofEnableBlendMode(OF_BLENDMODE_SCREEN);
+    ofSetWindowShape(800, 800);
+    
+    pinkPtr = &pink;
+    bayPtr = &bay;
+    
     trail.resize(8);
     y.resize(8); //可変長配列の大きさを8に。
     
@@ -11,7 +16,6 @@ void ofApp::setup(){
     prevX = 0;
     y[0] = 60*2;
     radius = 3;
-    rightMargin = 200; //右端からの距離
     ofSetVerticalSync(true);
 }
 
@@ -23,21 +27,23 @@ void ofApp::update(){
     }
     t = t - initTime;
     
-    x = int(t * 80) % (ofGetWidth()-rightMargin);
-    y[1] = 60*3 + 5 * sin(theta);
-    y[2] = 60*4 + 5 * tan(theta);
+    float noiseStep = ofRandom(100);
+    x = int(t * 80) % (ofGetWidth());
+    y[1] = 60*3 + 80 * ofNoise(noiseStep) * sin(theta * 0.3);
+    ofLog() << ofNoise(noiseStep);
+//    y[2] = 60*4 + 5 * tan(theta);
     theta++;
     
     cout << (x < prevX) << endl;
     
     if(x < prevX){
-        trail[0].clear();
-        trail[1].clear();
-        trail[2].clear();
+        for(int i = 0; i < trail.size(); i++){
+            trail[i].clear();
+        }
     }else{
-        trail[0].addVertex(x,y[0]); //trailにvertexを加えてけ！
-        trail[1].addVertex(x,y[1]);
-        trail[2].addVertex(x,y[2]);
+        for(int i = 0; i < trail.size(); i++){
+            trail[i].addVertex(x,y[i]);
+        }
     }
     /*
      (t * 120は速度。1秒間にどれだけ進むか)
@@ -52,16 +58,16 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofBackgroundGradient(pink, bay, OF_GRADIENT_LINEAR);
-    ofSetColor(255);
+//    ofBackgroundGradient(*bayPtr, *pinkPtr, OF_GRADIENT_LINEAR);
+    ofBackground(0);
+    ofSetColor(*pinkPtr, 210 * abs(sin(t)) + 40);
+    ofLog() << 210 * abs(sin(t)) + 40;
     ofEnableSmoothing();
     
-    ofDrawCircle(x, y[0], radius);
-    ofDrawCircle(x, y[1], radius);
-    ofDrawCircle(x, y[2], radius);
-    trail[0].draw();
-    trail[1].draw();
-    trail[2].draw();
+    for(int i = 0; i < trail.size(); i++){
+        ofDrawCircle(x, y[i], radius);
+        trail[i].draw();
+    }
 }
 
 //--------------------------------------------------------------

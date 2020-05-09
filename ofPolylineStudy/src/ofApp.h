@@ -22,14 +22,17 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     vector<ofPolyline> trail;
-    float x, prevX;
+
+    float x;
+    float prevX;
     vector<float> y;
     
     float preSpeed;
     float radius, initTime, t;
-    int rightMargin;
     float theta;
     
     ofColor pink = ofColor(223, 146, 188);
+    ofColor* pinkPtr;
     ofColor bay = ofColor(171, 217, 203);
+    ofColor* bayPtr;
 };
