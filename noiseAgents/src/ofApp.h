@@ -2,7 +2,8 @@
 
 #include "ofMain.h"
 #include "Agent.hpp"
-#include "Gui.hpp"
+//#include "Gui.hpp"
+#include "ofxGui.h"
 
 #define agentsNum 10000
 
@@ -26,7 +27,12 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     Agent agents[agentsNum];
-    float overlayAlpha = 90;
-//    Gui gui;
+//    float overlayAlpha = 90;
+    
+    ofxPanel gui;
+    ofxFloatSlider noiseScale;
+    ofxFloatSlider noiseStrength;
+    ofxFloatSlider agentsAlpha;
+    ofxFloatSlider overlayAlpha;
     
 };

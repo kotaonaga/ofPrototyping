@@ -2,11 +2,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui.setup();
+    gui.add(noiseScale.setup("noiseScale", 300.0, 1.0, 1000.0));
+    gui.add(noiseStrength.setup("noiseStrength", 10.0, 0.0, 100.0));
+    gui.add(agentsAlpha.setup("agentsAlpha", 90.0, 0.0, 100.0));
+    gui.add(overlayAlpha.setup("overlayAlpha", 232, 0, 255));
+    
     ofSetWindowShape(1280, 800);
     ofEnableSmoothing();
     ofSetVerticalSync(true);
     
-    overlayAlpha = ofMap(overlayAlpha, 0, 100, 0, 255);
+    
 }
 
 //--------------------------------------------------------------
@@ -26,7 +32,7 @@ void ofApp::draw(){
         agents[i].draw();
     }
     
-//    gui.draw();
+    gui.draw();
 }
 
 //--------------------------------------------------------------

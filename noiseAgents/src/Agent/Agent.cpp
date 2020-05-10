@@ -40,9 +40,17 @@ void Agent::update(){
 }
 
 void Agent::draw(){
-    ofSetLineWidth(stepSize);
+    ofSetLineWidth(0.09);
     ofSetColor(0, agentsAlpha);
     ofLine(pOld.x, pOld.y, p.x, p.y);
     pOld.set(p);
     
+}
+
+void Agent::setNoiseScale(float _noiseScale){
+    noiseScale = _noiseScale;
+}
+
+void Agent::setNoiseStrength(float _noiseStrength){
+    noiseStrength = _noiseStrength;
 }

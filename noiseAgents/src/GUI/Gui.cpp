@@ -6,18 +6,20 @@
 //
 
 #include "Gui.hpp"
-Gui::Gui(){
-    panel.setup();
-    panel.add(noiseScaleSlider.setup("noiseScale",300.0, 1.0, 1000.0));
-}
+//Gui::Gui(){
+//    panel.setup();
+//    panel.add(noiseScaleSlider.setup("noiseScale",300.0, 1.0, 1000.0));
+//}
+//
+//float Gui::getNoiseScale(){
+//    return noiseScaleSlider;
+//}
+//
+//void Gui::draw(){
+//    panel.draw();
+//}
 
-float Gui::getNoiseScale(){
-    return noiseScaleSlider;
-}
 
-void Gui::draw(){
-    panel.draw();
-}
 //
 //sliders[si++] = controlP5.addSlider("agentsCount",1,10000,left,top+posY+0,len,15);
 //posY += 30;

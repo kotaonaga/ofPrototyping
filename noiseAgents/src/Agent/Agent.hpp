@@ -28,6 +28,8 @@ public:
     void setup();
     void update();
     void draw();
+    void setNoiseScale(float _noiseScale);
+    void setNoiseStrength(float _noiseStrength);
 };
 
 #endif /* Agent_hpp */
