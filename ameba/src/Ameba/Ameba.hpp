@@ -20,7 +20,6 @@ public:
     float getPosX();
     float getPosY();
     
-    
 private:
     ofVec2f pos;
     ofVec2f vel;
