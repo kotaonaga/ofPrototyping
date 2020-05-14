@@ -11,11 +11,13 @@ Ameba::Ameba(){
    
 }
 
-void Ameba::setup(float _x, float _y){
-    pos.set(_x,_y);
+void Ameba::setup(){
+    float x = ofRandom(ofGetWidth());
+    float y = ofRandom(ofGetHeight());
+    
+    pos.set(x, y);
        vel.set(ofRandom(-1.0, 1.0), ofRandom(-1.0, 1.0));
-       vel * ofRandom(2.0, 5.0);
-       r = ofRandom(90, 130);
+    vel *= ofRandom(5.4, 5.5);
 }
 
 void Ameba::update(){
@@ -37,32 +39,28 @@ float Ameba::getPosY(){
     return pos.y;
 }
 
-float Ameba::getR(){
-    return r;
-}
-
-
 void Ameba::show(){
     float time = ofGetElapsedTimef();
-    ofBackground(239);
+    ofFill();
+    ofSetColor(255, 10.2);
+    ofDrawRectangle(0, 0, 800, 800);
         ofPushMatrix();
-        ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
-        
+
         auto radius = 300;
-        
+
         vector<glm::vec2> vertices;
         for(float deg = 0; deg < 360; deg += 0.3) {
-            
+
             auto base_location = glm::vec2(radius * cos(deg * DEG_TO_RAD), radius * sin(deg * DEG_TO_RAD));
             auto noise_radius = ofMap(ofNoise(base_location.x * 0.005, base_location.y * 0.005, (ofGetFrameNum()) * 0.01),
                                       0, 1, radius * 0.45, radius * 0.55);
-            auto location = glm::vec2(noise_radius * cos(deg * DEG_TO_RAD), noise_radius * sin(deg * DEG_TO_RAD));
-            
+            auto location = glm::vec2(noise_radius * cos(deg * DEG_TO_RAD) + pos.x, noise_radius * sin(deg * DEG_TO_RAD) + pos.y);
+
             vertices.push_back(location);
         }
-        
+
         ofFill();
-        ofSetColor(12,34,129, abs(sin(time)) * 255);
+        ofSetColor(12,77,222, 25.5);
         ofBeginShape();
         ofVertices(vertices);
         ofEndShape(true);

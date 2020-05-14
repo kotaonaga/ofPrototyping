@@ -14,17 +14,15 @@
 class Ameba{
 public:
     Ameba();
-    void setup(float _x, float _y);
+    void setup();
     void update();
     void show();
     float getPosX();
     float getPosY();
-    float getR();
     
     
 private:
     ofVec2f pos;
-    float r;
     ofVec2f vel;
     
 };
