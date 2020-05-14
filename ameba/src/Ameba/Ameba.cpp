@@ -64,12 +64,7 @@ void Ameba::show(){
         ofBeginShape();
         ofVertices(vertices);
         ofEndShape(true);
-        //
-    //    ofNoFill();
-    //    ofSetColor(39);
-    //    ofBeginShape();
-    //    ofVertices(vertices);
-    //    ofEndShape(true);
+
         vertices.clear();
         ofPopMatrix();
 }
