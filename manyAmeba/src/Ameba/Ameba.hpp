@@ -16,14 +16,16 @@ public:
     Ameba();
     void setup();
     void update();
-    void show();
+    void draw();
     float getPosX();
     float getPosY();
     
 private:
     ofVec2f pos;
     ofVec2f vel;
-    float radius = 300;
+    ofColor amebaColor;
+    float radius;
+    float maxNoiseRadius;
 };
 
 #endif /* Ameba_hpp */
