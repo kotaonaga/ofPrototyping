@@ -22,7 +22,7 @@ private:
   float radius;
 ofColor pColor;
     float maxNoiseRadius;
-    vector<glm::vec2> vertices;
+//    static vector<glm::vec2> vertices;
 
 public:
     Particle();

@@ -3,8 +3,10 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetBackgroundAuto(false);
-    ofEnableBlendMode(OF_BLENDMODE_SCREEN);
+//    ofEnableBlendMode(OF_BLENDMODE_);
     ofSetWindowShape(600, 600);
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -16,11 +18,14 @@ void ofApp::update(){
     for(int i = 0; i < ps.size(); i++){
         ps[i].update();
     }
+    
+    pNoise.noiseCalc();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofBackground(20);
+    ofSetColor(20, 10.2);
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     
     for(int i = 0; i < ps.size(); i++){
         ps[i].draw();
@@ -29,7 +34,6 @@ void ofApp::draw(){
     for (int i = ps.size() - 1; i >= 0; i--) {
         if (ps[i].getLife() <= 0.0) {
           ps.erase(ps.begin() + i);
-            
       }
     }
 }

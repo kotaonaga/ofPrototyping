@@ -7,6 +7,8 @@
 
 #include "Particle.hpp"
 
+//vector<glm::vec2> Particle::vertices;
+
 Particle::Particle(){
     
 }
@@ -17,7 +19,7 @@ void Particle::setup(){
     vx = 0;
     vy = 0;
     life = 1;
-    radius = ofRandom(10, 30);
+    radius = ofRandom(1, 8);
     pColor.setHsb(ofRandom(30, 255), 190, 255);
 }
 
@@ -36,7 +38,15 @@ void Particle::update(){
 }
 
 void Particle::noiseCalc(){
-    
+//    for(float deg = 0; deg < 360; deg += 0.3) {
+//
+//        auto base_location = glm::vec2(radius * cos(deg * DEG_TO_RAD), radius * sin(deg * DEG_TO_RAD));
+//        auto noise_radius = ofMap(ofNoise(base_location.x * 0.005, base_location.y * 0.005, (ofGetFrameNum()) * 0.01),
+//                                  0, 1, radius * 0.45, radius * maxNoiseRadius);
+//        auto location = glm::vec2(noise_radius * cos(deg * DEG_TO_RAD) + x, noise_radius * sin(deg * DEG_TO_RAD) + y);
+//
+//        vertices.push_back(location);
+//    }
 }
 
 void Particle::draw(){
@@ -44,6 +54,13 @@ void Particle::draw(){
     ofFill();
     ofSetColor(pColor, al);
     ofDrawEllipse(x, y, radius, radius);
+    
+//    ofLog() << vertices;
+//    ofFill();
+//    ofSetColor(pColor, al);
+//    ofBeginShape();
+////    ofVertices(vertices);
+//    ofEndShape(true);
 }
 
 float Particle::getLife(){

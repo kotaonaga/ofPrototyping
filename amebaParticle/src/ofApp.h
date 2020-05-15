@@ -23,4 +23,5 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     vector<Particle> ps;
+    Particle pNoise;
 };
