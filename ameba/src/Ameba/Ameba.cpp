@@ -17,15 +17,15 @@ void Ameba::setup(){
     
     pos.set(x, y);
        vel.set(ofRandom(-1.0, 1.0), ofRandom(-1.0, 1.0));
-    vel *= ofRandom(5.4, 5.5);
+    vel *= ofRandom(5.43, 5.48);
 }
 
 void Ameba::update(){
     pos += vel;
-    if (pos.x > ofGetWidth() || pos.x < 0) {
+    if (pos.x + radius/2 > ofGetWidth() || pos.x - radius/2 < 0) {
         vel.x *= -1;
     }
-    if (pos.y > ofGetHeight() || pos.y < 0) {
+    if (pos.y + radius/2 > ofGetHeight() || pos.y - radius/2 < 0) {
         vel.y *= -1;
     }
 }
@@ -46,7 +46,7 @@ void Ameba::show(){
     ofDrawRectangle(0, 0, 800, 800);
         ofPushMatrix();
 
-        auto radius = 300;
+//        auto radius = 300;
 
         vector<glm::vec2> vertices;
         for(float deg = 0; deg < 360; deg += 0.3) {

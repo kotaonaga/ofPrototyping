@@ -23,7 +23,7 @@ public:
 private:
     ofVec2f pos;
     ofVec2f vel;
-    
+    float radius = 300;
 };
 
 #endif /* Ameba_hpp */
