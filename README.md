@@ -2,6 +2,23 @@
 openFrameworksで作った習作・プロトタイプたちです。
 
 
+## たくさんのなんらか
+
+ゆらゆら動くたくさんのなんらかです。軌跡を残しながら進みます。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/manyAmeba)
+
+[![](https://img.youtube.com/vi/_TzCNaaG6p4/0.jpg)](https://www.youtube.com/watch?v=_TzCNaaG6p4)
+
+
+## 火花
+
+ゆらゆら動くたくさんのなんらかです。軌跡を残しながら進みます。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/amebaParticle)
+
+[![](https://img.youtube.com/vi/_22PRfbrsZ0/0.jpg)](https://www.youtube.com/watch?v=_22PRfbrsZ0)
+
 ## 励まされるコンピュータ
 
 励まされるのもいいですが、励ますのも元気が出るので励ませるコンピュータを作りました。
