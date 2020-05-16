@@ -1,6 +1,13 @@
 # ofPrototyping
 openFrameworksで作った習作・プロトタイプたちです。
 
+## abstract
+
+ゆらゆら動くたくさんのなんらかです。軌跡を残しながら進みます。
+
+[ソースコード](https://github.com/kotaonaga/ofPrototyping/tree/master/abstractAmeba)
+
+[![](https://img.youtube.com/vi/h-xV4whtyu4/0.jpg)](https://www.youtube.com/watch?v=h-xV4whtyu4)
 
 ## たくさんのなんらか
 
