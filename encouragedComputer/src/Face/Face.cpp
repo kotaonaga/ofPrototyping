@@ -8,7 +8,7 @@ Face::Face(){
     mode = make_shared<Globals::Mode>();
     *mode = Globals::Mode::depression;
     eye = make_unique<Eye>(mode);
-//    Eye();
+    //    Eye();
 }
 
 
@@ -17,6 +17,25 @@ void Face::dump(){
     eye->dump();
 }
 
+//void Face::setFaceMode(){
+//      switch(*mode){
+//          case Globals::Mode::depression:
+//              *mode = Globals::Mode::superCry;
+//                break;
+////            case superCry:
+////                facemode = cry;
+////                break;
+////            case cry:
+////                facemode = normal;
+////                break;
+////            case normal:
+////                facemode = smile;
+////                break;
+////            case smile:
+////                ofLog() << "yay!";
+////                break;
+//        }
+//}
 
 void Face::randomize(){
     vector<int> rdm = {0, 1, 2, 3, 4};
@@ -31,50 +50,49 @@ void Face::randomize(){
         *mode = Globals::Mode::normal;
     else if (rdm.front() == 4)
         *mode = Globals::Mode::smile;
-        
 }
 
 void Face::goNextFaceMode(){
     //もともとfaceMode++で実装していた。なんかもっとうまい書き方がありそう。
-//    switch(facemode){
-//        case depression:
-//            facemode = superCry;
-//            break;
-//        case superCry:
-//            facemode = cry;
-//            break;
-//        case cry:
-//            facemode = normal;
-//            break;
-//        case normal:
-//            facemode = smile;
-//            break;
-//        case smile:
-//            ofLog() << "yay!";
-//            break;
-//    }
+    switch(*mode){
+        case Globals::Mode::depression:
+            *mode = Globals::Mode::superCry;
+            break;
+        case Globals::Mode::superCry:
+            *mode = Globals::Mode::cry;
+            break;
+        case Globals::Mode::cry:
+            *mode = Globals::Mode::normal;
+            break;
+        case Globals::Mode::normal:
+            *mode = Globals::Mode::smile;
+            break;
+    }
 }
 
 void Face::update(){
-//        if(facemode == depression){
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
-//        }else if(facemode == superCry){
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
-//        }else if(facemode == cry){
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
-//        }else if(facemode == normal){
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
-//        }else if(facemode == smile){
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
-//        }else{
-//            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
-//        }
-        
-        shader.begin();
-        shader.setUniform1f("u_hue", hue);
-        shader.end();
+    //    if(facemode == depression){
+    //        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
+    //    }
+    //        if(facemode == depression){
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
+    //        }else if(facemode == superCry){
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
+    //        }else if(facemode == cry){
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
+    //        }else if(facemode == normal){
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
+    //        }else if(facemode == smile){
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
+    //        }else{
+    //            hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
+    //        }
     
-//    eye.update();
+    shader.begin();
+    shader.setUniform1f("u_hue", hue);
+    shader.end();
+    
+    eye->update();
 }
 
 
@@ -83,5 +101,6 @@ void Face::draw(){
     shader.begin();
     ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
     shader.end();
-//    eye.draw();
+    
+    eye->draw();
 }

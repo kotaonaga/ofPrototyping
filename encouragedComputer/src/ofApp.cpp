@@ -118,6 +118,11 @@ void ofApp::keyReleased(int key){
         textMode = 1;
         textTyped.erase(0, textTyped.length());
     }
+    
+    if(key == 'a'){
+        face.goNextFaceMode();
+        face.dump();
+    }
 }
 
 //--------------------------------------------------------------
