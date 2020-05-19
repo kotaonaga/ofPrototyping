@@ -34,38 +34,29 @@ void Face::randomize(){
 
 void Face::goNextFaceMode(){
     //もともとfaceMode++で実装していた。なんかもっとうまい書き方がありそう。
-    switch(*mode){
-        case Globals::Mode::depression:
-            *mode = Globals::Mode::superCry;
-            break;
-        case Globals::Mode::superCry:
-            *mode = Globals::Mode::cry;
-            break;
-        case Globals::Mode::cry:
-            *mode = Globals::Mode::normal;
-            break;
-        case Globals::Mode::normal:
-            *mode = Globals::Mode::smile;
-            break;
-        case Globals::Mode::smile:
-            break;
+    if(*mode == Globals::Mode::depression){
+        *mode = Globals::Mode::superCry;
+    }else if(*mode == Globals::Mode::superCry){
+        *mode = Globals::Mode::cry;
+    }else if(*mode == Globals::Mode::cry){
+        *mode = Globals::Mode::normal;
+    }else if(*mode == Globals::Mode::normal){
+        *mode = Globals::Mode::smile;
     }
 }
 
 void Face::update(){
-            if(*mode == Globals::Mode::depression){
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
-            }else if(*mode == Globals::Mode::superCry){
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
-            }else if(*mode == Globals::Mode::cry){
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
-            }else if(*mode == Globals::Mode::normal){
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
-            }else if(*mode == Globals::Mode::smile){
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
-            }else{
-                hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.05 - 0.0) + 0.0;
-            }
+    if(*mode == Globals::Mode::depression){
+        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.7 - 0.6) + 0.6;
+    }else if(*mode == Globals::Mode::superCry){
+        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.6 - 0.4) + 0.4;
+    }else if(*mode == Globals::Mode::cry){
+        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.4 - 0.3) + 0.3;
+    }else if(*mode == Globals::Mode::normal){
+        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.3 - 0.15) + 0.15;
+    }else if(*mode == Globals::Mode::smile){
+        hue = abs(sin(ofGetElapsedTimef()) * 0.7) * (0.10 - 0.0) + 0.0;
+    }
     
     shader.begin();
     shader.setUniform1f("u_hue", hue);

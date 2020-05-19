@@ -78,6 +78,7 @@ void ofApp::draw(){
     if(chat.getTextPos() > ofGetWidth()){
         textMode = 2;
         face.goNextFaceMode();
+        face.dump();
     }
     
     if(textMode == 0){
@@ -117,11 +118,6 @@ void ofApp::keyReleased(int key){
     if(key == OF_KEY_RETURN){
         textMode = 1;
         textTyped.erase(0, textTyped.length());
-    }
-    
-    if(key == 'a'){
-        face.goNextFaceMode();
-        face.dump();
     }
 }
 
