@@ -8,16 +8,17 @@
 #include "Eye.hpp"
 
 Eye::Eye(shared_ptr<Globals::Mode> _mode) :mode(_mode){
-    tear = make_unique<Tear>(mode);
     
     openedTime = 0;
     closedTime = 0;
     isClosed = false;
     eyeSize = 60;
     
+    tear = make_unique<Tear>(mode);
+    
 //    Tear rightTear;
 //    rightTears.push_back(rightTear);
-//
+
 //    Tear leftTear;
 //    leftTears.push_back(leftTear);
 }

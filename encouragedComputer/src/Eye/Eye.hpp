@@ -29,11 +29,9 @@ private:
     
 public:
     Eye(shared_ptr<Globals::Mode> _mode);
-//        tear = make_unique<Tear>(mode);
-//    };
+
     void dump();
 //        Globals::dump_mode("Eye", mode);
-//        tear->dump();
     void update();
     void draw();
     void setFaceMode(int _facemode);

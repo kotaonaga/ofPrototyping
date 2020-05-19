@@ -18,18 +18,21 @@ private:
     
 public:
     Tear(shared_ptr<Globals::Mode> _mode);
+    void updateFallRight();
+    void updateFallLeft();
+    void drawRight();
+    void drawLeft();
+    
     void dump();
     int getY();
     int getNextRightPos();
     int getNextLeftPos();
-    void updateFallRight();
-    void updateFallLeft();
+    
     int getFallPosRight();
     int getFallPosLeft();
     void resetFallPosRight();
     void resetFallPosLeft();
-    void drawRight();
-    void drawLeft();
+    
 };
 
 #endif /* Tear_hpp */

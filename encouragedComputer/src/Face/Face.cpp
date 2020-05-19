@@ -8,7 +8,6 @@ Face::Face(){
     mode = make_shared<Globals::Mode>();
     *mode = Globals::Mode::depression;
     eye = make_unique<Eye>(mode);
-    //    Eye();
 }
 
 
