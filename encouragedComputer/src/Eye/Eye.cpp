@@ -13,15 +13,23 @@ Eye::Eye(shared_ptr<Globals::Mode> _mode) :mode(_mode){
     closedTime = 0;
     isClosed = false;
     eyeSize = 60;
-    
+    posX = ofGetWidth() * 1/3;
+    posY = ofGetHeight() * 1/3;
     tear = make_unique<Tear>(mode);
     
-//    Tear rightTear;
-//    rightTears.push_back(rightTear);
-
-//    Tear leftTear;
-//    leftTears.push_back(leftTear);
+    //    Tear rightTear(mode);
+    //    rightTear.setup(ofGetWidth() * 1/3, ofGetHeight() * 1/3);
+    //    rightTears.push_back(rightTear);
+    
+    Tear rightTear;
+    rightTear.setup(ofGetWidth() * 1/3, ofGetHeight() * 1/3);
+    rightTears.push_back(rightTear);
 }
+
+void Eye::setup(int _posX, int _posY){
+    
+}
+
 
 void Eye::dump(){
     Globals::dump_mode("Eye", mode);
@@ -35,23 +43,23 @@ void Eye::update(){
     }
     
     if (ofGetElapsedTimeMillis() - closedTime > 300 && isClosed == true) {
-           isClosed = false;
-           openedTime = ofGetElapsedTimeMillis();
-       }
+        isClosed = false;
+        openedTime = ofGetElapsedTimeMillis();
+    }
     
-        for(int i = 0; i < rightTears.size(); i++){
-            rightTears[i].updateFallRight();
-        }
-    
-        for(int i = 0; i < leftTears.size(); i++){
-            leftTears[i].updateFallLeft();
-        }
+    //        for(int i = 0; i < rightTears.size(); i++){
+    //            rightTears[i].updateFallRight();
+    //        }
+    //
+    //        for(int i = 0; i < leftTears.size(); i++){
+    //            leftTears[i].updateFallLeft();
+    //        }
 }
 
 void Eye::draw(){
     ofSetLineWidth(10);
     ofSetCircleResolution(100);
-
+    
     if (isClosed == false) {
         ofSetColor(255);
         ofDrawCircle(ofGetWidth() * 1/3, ofGetHeight()/3, eyeSize/2);
@@ -62,11 +70,7 @@ void Eye::draw(){
         ofLine(ofGetWidth() * 2/3 - (eyeSize * 2/3), ofGetHeight()/3, ofGetWidth() * 2/3 + (eyeSize * 2/3), ofGetHeight()/3);
     }
     
-     for(int i = 0; i < rightTears.size(); i++){
-            rightTears[i].drawRight();
-        }
-    
-    for(int i = 0; i < leftTears.size(); i++){
-                leftTears[i].drawLeft();
+    for(int i = 0; i < rightTears.size(); i++){
+        rightTears[i].draw();
     }
 }

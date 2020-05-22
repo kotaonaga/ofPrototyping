@@ -8,6 +8,10 @@
 #include "Tear.hpp"
 //#include "Face.hpp"
 
+Tear::Tear(){
+    
+}
+
 Tear::Tear(shared_ptr<Globals::Mode> _mode) :mode(_mode){
 //    Tear rightTear;
 //    rightTear.setupRight();
@@ -18,6 +22,33 @@ Tear::Tear(shared_ptr<Globals::Mode> _mode) :mode(_mode){
 //    leftTears.push_back(leftTear);
 //    ofLog() << face.getFaceMode();
 }
+
+void Tear::setup(int _startWidth, int _startHeight){
+    startWidth = _startWidth;
+    
+    startHeight = _startHeight;
+}
+
+void Tear::update(){
+    fallPos += 3;
+}
+
+void Tear::draw(){
+    ofLog() << startWidth;
+    ofLog() << "目標" << ofGetWidth() * 1/3;
+    
+    ofPushMatrix();
+    ofTranslate(startWidth, startHeight);
+    ofRotate(-90);
+    ofBeginShape();
+    for (float t = 0; t < TWO_PI; t += 0.1) {
+      r = 1 / (A * sin(t/2)+1);
+      ofVertex( R * r * cos(t), R * r * sin(t));
+    }
+    ofEndShape(true);
+    ofPopMatrix();
+}
+
 
 void Tear::dump(){
     Globals::dump_mode("Tear", mode);

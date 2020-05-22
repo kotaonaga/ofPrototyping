@@ -8,6 +8,15 @@ Face::Face(){
     mode = make_shared<Globals::Mode>();
     *mode = Globals::Mode::depression;
     eye = make_unique<Eye>(mode);
+    
+//    Eye leftEye(mode);
+//    Eye rightEye(mode);
+    
+//    leftEye.setup(ofGetWidth() * 1/3, ofGetHeight() * 1/3);
+//    rightEye.setup(ofGetWidth() * 2/3, ofGetHeight() * 1/3);
+//
+//    rightEye(mode);
+//    leftEye(mode);
 }
 
 
@@ -72,4 +81,6 @@ void Face::draw(){
     shader.end();
     
     eye->draw();
+//    leftEye.draw();
+//    rightEye.draw();
 }

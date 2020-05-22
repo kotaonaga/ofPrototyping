@@ -19,6 +19,8 @@ private:
     int closedTime;
     Boolean isClosed;
     int eyeSize;
+    int posX;
+    int posY;
     
     //涙
     vector<Tear> rightTears;
@@ -32,6 +34,7 @@ public:
 
     void dump();
 //        Globals::dump_mode("Eye", mode);
+    void setup(int _posX, int posY);
     void update();
     void draw();
     void setFaceMode(int _facemode);
