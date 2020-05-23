@@ -44,6 +44,9 @@ bool Square::getIsShow(){
     return isShow;
 }
 
+void Square::setAlpha(int _alpha){
+    alpha = _alpha;
+}
 int Square::getAlpha(){
     return alpha;
 }

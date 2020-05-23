@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "Square.hpp"
 
-#define numSquares 3
+#define numSquares 5
 
 class ofApp : public ofBaseApp{
 

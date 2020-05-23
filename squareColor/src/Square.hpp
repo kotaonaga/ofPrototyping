@@ -29,5 +29,6 @@ public:
     void decreaseAlpha();
     void setIsShow(bool _isShow);
     bool getIsShow();
+    void setAlpha(int _alpha);
     int getAlpha();
 };

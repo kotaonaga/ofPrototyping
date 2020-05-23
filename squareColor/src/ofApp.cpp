@@ -9,7 +9,7 @@ void ofApp::setup(){
     for(int i = 0; i < numSquares; i++){
         Square s;
         s.setup(0, 500 - 100 * i);
-        s.setColor(ofColor(200 - 50 * i, 11, 90, 255));
+        s.setColor(ofColor(150 - 50 * i, 11, 90, 255));
         squares.push_back(s);
     }
     
@@ -17,7 +17,18 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
+    for(int i = 0; i < numSquares; i++){
+        //次の正方形を見せる。
+        if(squares[i].getAlpha() < 127){
+            squares[i+1].setIsShow(true);
+        }
+        
+        //透明度0になった正方形復活。
+        if(squares[i].getAlpha() < 0){
+            squares[i].setIsShow(false);
+            squares[i].setAlpha(255);
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -43,30 +54,13 @@ void ofApp::draw(){
     s1.draw();
     
     
-    if(squares[0].getIsShow()){
-        squares[0].decreaseAlpha();
-        squares[0].draw();
+    //描かれたら透明度が減っていく。
+    for(int i = 0; i < numSquares; i++){
+        if(squares[i].getIsShow()){
+            squares[i].decreaseAlpha();
+            squares[i].draw();
+        }
     }
-    
-    if(squares[0].getAlpha() < 127){
-        squares[1].setIsShow(true);
-    }
-    
-    if(squares[1].getIsShow()){
-        squares[1].decreaseAlpha();
-        squares[1].draw();
-    }
-    
-    if(squares[1].getAlpha() < 127){
-        squares[2].setIsShow(true);
-    }
-    
-    if(squares[2].getIsShow()){
-        squares[2].decreaseAlpha();
-        squares[2].draw();
-    }
-    
-    
 }
 
 //--------------------------------------------------------------
