@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "Square.hpp"
 
+#define numSquares 3
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -24,9 +26,12 @@ class ofApp : public ofBaseApp{
     
 //    vector<Square> squares;
     vector<ofColor> colors;
-
+    
     
     Square s1;
     Square s2;
     Square s3;
+    Square s4;
+    
+    vector<Square> squares;
 };

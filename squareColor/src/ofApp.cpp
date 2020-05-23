@@ -6,6 +6,13 @@ void ofApp::setup(){
     ofBackground(200);
     
     
+    for(int i = 0; i < numSquares; i++){
+        Square s;
+        s.setup(0, 500 - 100 * i);
+        s.setColor(ofColor(200 - 50 * i, 11, 90, 255));
+        squares.push_back(s);
+    }
+    
 }
 
 //--------------------------------------------------------------
@@ -32,25 +39,31 @@ void ofApp::draw(){
     
     
     s1.setup(0, 500);
+    s1.setColor(ofColor(250, 11, 90, 255));
     s1.draw();
     
     
-    if(s2.getIsShow()){
-        s2.setup(0, 400);
-        s2.setColor(ofColor(200, 11, 90, 255));
-        s2.decreaseAlpha();
-        s2.draw();
+    if(squares[0].getIsShow()){
+        squares[0].decreaseAlpha();
+        squares[0].draw();
     }
     
-    if(s2.getAlpha() < 127){
-        s3.setIsShow(true);
+    if(squares[0].getAlpha() < 127){
+        squares[1].setIsShow(true);
     }
     
-    if(s3.getIsShow()){
-        s3.setup(0, 300);
-        s3.setColor(ofColor(150, 11, 90, 255));
-        s3.decreaseAlpha();
-        s3.draw();
+    if(squares[1].getIsShow()){
+        squares[1].decreaseAlpha();
+        squares[1].draw();
+    }
+    
+    if(squares[1].getAlpha() < 127){
+        squares[2].setIsShow(true);
+    }
+    
+    if(squares[2].getIsShow()){
+        squares[2].decreaseAlpha();
+        squares[2].draw();
     }
     
     
@@ -59,7 +72,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     if(OF_KEY_RETURN){
-        s2.setIsShow(true);
+        squares[0].setIsShow(true);
     }
 }
 
