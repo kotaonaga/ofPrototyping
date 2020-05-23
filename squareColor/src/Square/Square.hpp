@@ -25,7 +25,8 @@ public:
     void setup(int _posX, int _posY);
     void update();
     void draw();
-    void setColor(ofColor _color);
+//    void setColor(ofColor _color);
+    void setHsb(float _hue, float _saturation, float brightness);
     void decreaseAlpha();
     void setIsShow(bool _isShow);
     bool getIsShow();

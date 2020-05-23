@@ -3,7 +3,8 @@
 #include "ofMain.h"
 #include "Square.hpp"
 
-#define numSquares 5
+#define numMovingSquares 6
+#define numFixedSquares 6
 
 class ofApp : public ofBaseApp{
 
@@ -24,14 +25,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-//    vector<Square> squares;
-    vector<ofColor> colors;
-    
-    
-    Square s1;
-    Square s2;
-    Square s3;
-    Square s4;
-    
-    vector<Square> squares;
+    vector<Square> fixedSquares;
+//    vector<Square> movingSquares;
+    vector<vector<Square>> movingSquares;
 };

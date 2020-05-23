@@ -3,31 +3,37 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowShape(600, 600);
-    ofBackground(200);
+    ofBackground(60);
     
-    
-    for(int i = 0; i < numSquares; i++){
+    for(int posX = 0; posX < numFixedSquares; posX++){
         Square s;
-        s.setup(0, 500 - 100 * i);
-        s.setColor(ofColor(150 - 50 * i, 11, 90, 255));
-        squares.push_back(s);
+        s.setup(posX + 100 * posX, 500);
+        s.setHsb(255 - posX * 45, 170, 240);
+        fixedSquares.push_back(s);
+    }
+    
+    for(int i = 0; i < numMovingSquares; i++){
+        Square s;
+        s.setup(0, 400 - 100 * i);
+        s.setHsb(255, 170 - 20 * i, 240);
+        movingSquares.at(0).push_back(s);
     }
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    for(int i = 0; i < numSquares; i++){
+    for(int i = 0; i < numMovingSquares; i++){
         //次の正方形を見せる。
-        if(squares[i].getAlpha() < 127){
-            squares[i+1].setIsShow(true);
-        }
+//        if(movingSquares[i].getAlpha() < 127){
+//            movingSquares[i+1].setIsShow(true);
+//        }
         
         //透明度0になった正方形復活。
-        if(squares[i].getAlpha() < 0){
-            squares[i].setIsShow(false);
-            squares[i].setAlpha(255);
-        }
+//        if(movingSquares[i].getAlpha() < 0){
+//            movingSquares[i].setIsShow(false);
+//            movingSquares[i].setAlpha(255);
+//        }
     }
 }
 
@@ -48,26 +54,29 @@ void ofApp::draw(){
     //        ofDrawRectangle(posX * 100, 500, 100, 100);
     //    }
     
+    for(int posX = 0; posX < numFixedSquares; posX++){
+        fixedSquares[posX].draw();
+    }
     
-    s1.setup(0, 500);
-    s1.setColor(ofColor(250, 11, 90, 255));
-    s1.draw();
+//    s1.setup(0, 500);
+//    s1.setHsb(255, 180, 240);
+//    s1.draw();
     
     
     //描かれたら透明度が減っていく。
-    for(int i = 0; i < numSquares; i++){
-        if(squares[i].getIsShow()){
-            squares[i].decreaseAlpha();
-            squares[i].draw();
-        }
+    for(int i = 0; i < numMovingSquares; i++){
+//        if(movingSquares[i].getIsShow()){
+//            movingSquares[i].decreaseAlpha();
+//            movingSquares[i].draw();
+//        }
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if(OF_KEY_RETURN){
-        squares[0].setIsShow(true);
-    }
+//    if(OF_KEY_RETURN){
+//        movingSquares[0].setIsShow(true);
+//    }
 }
 
 //--------------------------------------------------------------

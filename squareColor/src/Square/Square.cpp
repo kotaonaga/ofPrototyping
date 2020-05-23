@@ -10,6 +10,7 @@
 Square::Square(){
     alpha = 255;
     color = ofColor(0, 255, 0);
+    color.setHsb(255, 180, 240);
 }
 
 void Square::setup(int _posX, int _posY){
@@ -22,18 +23,18 @@ void Square::update(){
 }
 
 void Square::draw(){
-    ofFill();
+//    ofNoFill();
     ofSetColor(color, alpha);
     ofDrawRectangle(posX, posY, 100, 100);
 }
 
-void Square::setColor(ofColor _color){
-    color = _color;
+void Square::setHsb(float _hue, float _saturation, float _brightness){
+    color.setHsb(_hue, _saturation, _brightness);
 }
 
 
 void Square::decreaseAlpha(){
-    alpha -= 7.0;
+    alpha -= 10.0;
 }
 
 void Square::setIsShow(bool _isShow){
