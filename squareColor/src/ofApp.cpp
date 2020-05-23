@@ -16,7 +16,7 @@ void ofApp::setup(){
         Square s;
         s.setup(0, 400 - 100 * i);
         s.setHsb(255, 170 - 20 * i, 240);
-        movingSquares.at(0).push_back(s);
+        movingSquares.push_back(s);
     }
     
 }
@@ -25,15 +25,15 @@ void ofApp::setup(){
 void ofApp::update(){
     for(int i = 0; i < numMovingSquares; i++){
         //次の正方形を見せる。
-//        if(movingSquares[i].getAlpha() < 127){
-//            movingSquares[i+1].setIsShow(true);
-//        }
+        if(movingSquares[i].getAlpha() < 127){
+            movingSquares[i+1].setIsShow(true);
+        }
         
         //透明度0になった正方形復活。
-//        if(movingSquares[i].getAlpha() < 0){
-//            movingSquares[i].setIsShow(false);
-//            movingSquares[i].setAlpha(255);
-//        }
+        if(movingSquares[i].getAlpha() < 0){
+            movingSquares[i].setIsShow(false);
+            movingSquares[i].setAlpha(255);
+        }
     }
 }
 
@@ -65,18 +65,18 @@ void ofApp::draw(){
     
     //描かれたら透明度が減っていく。
     for(int i = 0; i < numMovingSquares; i++){
-//        if(movingSquares[i].getIsShow()){
-//            movingSquares[i].decreaseAlpha();
-//            movingSquares[i].draw();
-//        }
+        if(movingSquares[i].getIsShow()){
+            movingSquares[i].decreaseAlpha();
+            movingSquares[i].draw();
+        }
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-//    if(OF_KEY_RETURN){
-//        movingSquares[0].setIsShow(true);
-//    }
+    if(OF_KEY_RETURN){
+        movingSquares[0].setIsShow(true);
+    }
 }
 
 //--------------------------------------------------------------

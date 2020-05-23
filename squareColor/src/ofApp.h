@@ -26,6 +26,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     vector<Square> fixedSquares;
-//    vector<Square> movingSquares;
-    vector<vector<Square>> movingSquares;
+    vector<Square> movingSquares;
+//    vector<vector<Square>> movingSquares;
 };
