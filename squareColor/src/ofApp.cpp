@@ -3,7 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowShape(600, 600);
-    ofBackground(60);
+    ofBackground(220);
     
     for(int posX = 0; posX < numFixedSquares; posX++){
         Square s;
@@ -12,12 +12,27 @@ void ofApp::setup(){
         fixedSquares.push_back(s);
     }
     
+    //まずは縦を作る。y座標。movingSに突っ込む
     for(int i = 0; i < numMovingSquares; i++){
         Square s;
         s.setup(0, 400 - 100 * i);
         s.setHsb(255, 170 - 20 * i, 240);
         movingSquares.push_back(s);
     }
+    
+    for(int i = 0; i < numMovingSquares; i++){
+        movingMatrixSquares.push_back(movingSquares);
+    }
+    
+    for(int i = 0; i < numMovingSquares; i++){
+        for(int j = 0; j < numMovingSquares; j++){
+            movingMatrixSquares[i][j].setup(100 * i, 400 - 100 * j);
+        }
+    }
+    
+    ofLog() << movingMatrixSquares[0][1].getPosX();
+    ofLog() << movingMatrixSquares[1][1].getPosX();
+//    movingMatrixSquares.push_back(movingSquares);
     
 }
 
@@ -39,21 +54,6 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    //    for(int height = 1; height <= 4; height++){
-    //        for(int posX = 1; posX <= 4; posX++){
-    //            ofFill();
-    //            ofSetColor(213, 33, 11);
-    //            ofDrawRectangle(ofGetposX()/5 * posX , ofGetHeight()/5 * height, 50, 50);
-    //        }
-    //    }
-    
-    //画面したに敷き詰める
-    //    for(int posX = 0; posX <= 5; posX++){
-    //        ofFill();
-    //        ofSetColor(122, 11, 40 * posX);
-    //        ofDrawRectangle(posX * 100, 500, 100, 100);
-    //    }
-    
     for(int posX = 0; posX < numFixedSquares; posX++){
         fixedSquares[posX].draw();
     }
@@ -74,8 +74,12 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if(OF_KEY_RETURN){
+    if(key == 'a'){
         movingSquares[0].setIsShow(true);
+    }
+    
+    if(key == 's'){
+        movingMatrixSquares[1][0].setIsShow(true);
     }
 }
 

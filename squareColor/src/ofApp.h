@@ -27,5 +27,5 @@ class ofApp : public ofBaseApp{
     
     vector<Square> fixedSquares;
     vector<Square> movingSquares;
-//    vector<vector<Square>> movingSquares;
+    vector<vector<Square>> movingMatrixSquares;
 };

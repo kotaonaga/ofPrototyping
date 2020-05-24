@@ -32,4 +32,5 @@ public:
     bool getIsShow();
     void setAlpha(int _alpha);
     int getAlpha();
+    int getPosX();
 };

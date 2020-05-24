@@ -51,3 +51,7 @@ void Square::setAlpha(int _alpha){
 int Square::getAlpha(){
     return alpha;
 }
+
+int Square::getPosX(){
+    return posX;
+}
