@@ -21,18 +21,18 @@ void ofApp::setup(){
     }
     
     for(int i = 0; i < numMovingSquares; i++){
-        movingMatrixSquares.push_back(movingSquares);
+        movingSquaresMatrix.push_back(movingSquares);
     }
     
     for(int i = 0; i < numMovingSquares; i++){
         for(int j = 0; j < numMovingSquares; j++){
-            movingMatrixSquares[i][j].setup(100 * i, 400 - 100 * j);
+            movingSquaresMatrix[i][j].setup(100 * i, 400 - 100 * j);
         }
     }
     
-    ofLog() << movingMatrixSquares[0][1].getPosX();
-    ofLog() << movingMatrixSquares[1][1].getPosX();
-//    movingMatrixSquares.push_back(movingSquares);
+    ofLog() << movingSquaresMatrix[0][1].getPosX();
+    ofLog() << movingSquaresMatrix[1][1].getPosX();
+//    movingSquaresMatrix.push_back(movingSquares);
     
 }
 
@@ -40,14 +40,15 @@ void ofApp::setup(){
 void ofApp::update(){
     for(int i = 0; i < numMovingSquares; i++){
         //次の正方形を見せる。
-        if(movingSquares[i].getAlpha() < 127){
-            movingSquares[i+1].setIsShow(true);
+        if(movingSquaresMatrix[0][i].getAlpha() < 127){
+//            movingSquares[i+1].setIsShow(true);
+            movingSquaresMatrix[0][i+1].setIsShow(true);
         }
         
         //透明度0になった正方形復活。
-        if(movingSquares[i].getAlpha() < 0){
-            movingSquares[i].setIsShow(false);
-            movingSquares[i].setAlpha(255);
+        if(movingSquaresMatrix[0][i].getAlpha() < 0){
+            movingSquaresMatrix[0][i].setIsShow(false);
+            movingSquaresMatrix[0][i].setAlpha(255);
         }
     }
 }
@@ -65,9 +66,9 @@ void ofApp::draw(){
     
     //描かれたら透明度が減っていく。
     for(int i = 0; i < numMovingSquares; i++){
-        if(movingSquares[i].getIsShow()){
-            movingSquares[i].decreaseAlpha();
-            movingSquares[i].draw();
+        if(movingSquaresMatrix[0][i].getIsShow()){
+            movingSquaresMatrix[0][i].decreaseAlpha();
+            movingSquaresMatrix[0][i].draw();
         }
     }
 }
@@ -75,11 +76,11 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     if(key == 'a'){
-        movingSquares[0].setIsShow(true);
+        movingSquaresMatrix[0][0].setIsShow(true);
     }
     
     if(key == 's'){
-        movingMatrixSquares[1][0].setIsShow(true);
+        movingSquaresMatrix[1][0].setIsShow(true);
     }
 }
 
