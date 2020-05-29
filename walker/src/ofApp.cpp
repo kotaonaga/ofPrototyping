@@ -19,10 +19,10 @@ void ofApp::setup(){
         walkers[i] = w;
     }
     
-    walkers[0].setHex(0xFFB17A);
-    walkers[1].setHex(0x4F4789);
-    walkers[2].setHex(0x201335);
-    walkers[3].setHex(0xFCE762);
+    walkers[0].setHex(0x8EB5D0);
+    walkers[1].setHex(0xECAD0B);
+    walkers[2].setHex(0xF37148);
+    walkers[3].setHex(0xD56062);
     
 }
 
