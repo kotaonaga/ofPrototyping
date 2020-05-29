@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "Walker.hpp"
 
-#define numWalkers 4
+#define numWalker 4
 
 class ofApp : public ofBaseApp{
 
@@ -23,11 +23,6 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
-    Walker walker;
-    Walker remover;
-    Walker runner;
-    
-//    vector<Walker> walkers;
-    Walker walkers[numWalkers];
+
+    Walker walkers[numWalker];
 };

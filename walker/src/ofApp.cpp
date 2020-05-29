@@ -4,18 +4,17 @@
 void ofApp::setup(){
     ofSetWindowShape(600, 600);
     ofSetBackgroundAuto(false);
-//    ofBackground(0xFFFDED);
     ofBackground(0xFFFDED);
     
+    //vectorにすると動かない
 //    walkers.resize(4);
-    
 //    for(int i = 0; i < walkers.size(); i++){
 //        Walker w;
 //        w.setup();
 //        walkers.push_back(w);
 //    }
     
-    for(int i = 0; i < numWalkers; i++){
+    for(int i = 0; i < numWalker; i++){
         Walker w;
         walkers[i] = w;
     }
@@ -35,7 +34,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    for(int i = 0; i < numWalkers; i++){
+    for(int i = 0; i < numWalker; i++){
         walkers[i].draw();
     }
 }
