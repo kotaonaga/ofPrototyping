@@ -32,7 +32,6 @@ void ofApp::setup(){
     
     ofLog() << movingSquaresMatrix[0][1].getPosX();
     ofLog() << movingSquaresMatrix[1][1].getPosX();
-//    movingSquaresMatrix.push_back(movingSquares);
     
 }
 
@@ -58,12 +57,6 @@ void ofApp::draw(){
     for(int posX = 0; posX < numFixedSquares; posX++){
         fixedSquares[posX].draw();
     }
-    
-//    s1.setup(0, 500);
-//    s1.setHsb(255, 180, 240);
-//    s1.draw();
-    
-    
     //描かれたら透明度が減っていく。
     for(int i = 0; i < numMovingSquares; i++){
         if(movingSquaresMatrix[0][i].getIsShow()){
