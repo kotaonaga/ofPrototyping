@@ -17,11 +17,9 @@ shared_ptrTest/
 simpleEventsExample/
 softVisualize/
 svgSandbox/
-
 00_firmataExample/
 Polar_OH1_heartbeat-master/
 arduinoLazor/
-arrow_drill/
 autoCaption/
 basicSandbox/
 class_arrow_test/
@@ -33,12 +31,8 @@ inkFillBufferDebug/
 lovelyKeyboard/
 mailPiano/
 menhera_computer/
-noiseSandbox/
-ofxFlowToolsStudy/
-ofxGUIStudy/
 parametricLiquid/
 randomCaption/
-sandbox/
 tutorial/
 tvClassTest/
 
