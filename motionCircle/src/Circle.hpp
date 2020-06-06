@@ -1,21 +1,24 @@
 //
-//  Orbit.hpp
+//  Circle.hpp
 //  motionCircle
 //
 //  Created by kota on 2020/05/30.
 //
 
-#ifndef Orbit_hpp
-#define Orbit_hpp
+#ifndef Circle_hpp
+#define Circle_hpp
 
 #include "ofMain.h"
 
-#endif /* Orbit_hpp */
-class Orbit{
+#endif /* Circle_hpp */
+class Circle{
 private:
-    currentCicleQuadEaseOutRatio = -sq(currentCicleProgressRatio - 1) + 1;
+    float frameCountPerCicle;
+    float currentCicleFrameCount;
+    float currentCicleQuadEaseOutRatio;
+    
 public:
-    Orbit();
+    Circle();
     void update();
     void draw();
 };
