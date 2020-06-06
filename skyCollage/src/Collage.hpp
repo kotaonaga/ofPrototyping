@@ -11,3 +11,15 @@
 #include <stdio.h>
 
 #endif /* Collage_hpp */
+
+class Collage{
+private:
+    float x;
+    float y;
+    float rotation;
+    float scaling;
+    int indexToImage;
+    
+public:
+    Collage();
+};
