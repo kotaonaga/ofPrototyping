@@ -8,7 +8,7 @@
 #include "Mochi.hpp"
 
 Mochi::Mochi(){
-    stepSize = 2;
+    stepSize = 1;
     distortionFactor = 1;
     initRadius = 150;
     centerX = 0;
@@ -29,10 +29,10 @@ void Mochi::update(){
     float time = ofGetElapsedTimef();
     ofSetColor(123,45,170 * abs(sin(time)), 70);
     
-    if (ofGetMouseX() != 0 || ofGetMouseY() != 0) {
-      centerX += (ofGetMouseX()-centerX) * 0.01;
-      centerY += (ofGetMouseY()-centerY) * 0.01;
-    }
+//    if (ofGetMouseX() != 0 || ofGetMouseY() != 0) {
+//      centerX += (ofGetMouseX()-centerX) * 0.01;
+//      centerY += (ofGetMouseY()-centerY) * 0.01;
+//    }
     
     for (int i=0; i<formResolution; i++){
       x[i] += ofRandom(-stepSize,stepSize);
@@ -45,7 +45,7 @@ void Mochi::draw(){
     ofSetLineWidth(0.75);
 //    if (filled) ofSetColor(ofRandom(255));
 //    else ofNoFill();
-
+    ofNoFill();
     ofBeginShape();
     // start controlpoint
     ofCurveVertex(x[formResolution-1]+centerX, y[formResolution-1]+centerY);
