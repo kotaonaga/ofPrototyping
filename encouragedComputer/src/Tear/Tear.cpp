@@ -25,7 +25,6 @@ Tear::Tear(shared_ptr<Globals::Mode> _mode) :mode(_mode){
 
 void Tear::setup(int _startWidth, int _startHeight){
     startWidth = _startWidth;
-    
     startHeight = _startHeight;
 }
 
@@ -38,7 +37,8 @@ void Tear::draw(){
     ofLog() << "目標" << ofGetWidth() * 1/3;
     
     ofPushMatrix();
-    ofTranslate(startWidth, startHeight);
+//    ofTranslate(startWidth, startHeight);
+    ofTranslate(ofGetWidth() * 1/3, ofGetHeight() * 1/3);
     ofRotate(-90);
     ofBeginShape();
     for (float t = 0; t < TWO_PI; t += 0.1) {
