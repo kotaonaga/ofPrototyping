@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Palette.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -21,10 +22,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    vector<ofColor> colors;
-    vector<float> hues;
-    int colorNum = 5;
-    
+    vector< ofColor > colors;
     ofImage img;
-		
+    float step;
+    float noise;
+    
+    Palette palette;
 };
