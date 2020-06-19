@@ -11,3 +11,11 @@
 #include <stdio.h>
 
 #endif /* Shape_hpp */
+
+class Shape{
+private:
+public:
+    Shape();
+    void update();
+    void draw();
+};

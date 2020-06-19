@@ -6,3 +6,15 @@
 //
 
 #include "Shape.hpp"
+
+Shape::Shape(){
+    
+}
+
+void Shape::update(){
+    
+}
+
+void Shape::draw(){
+    
+}
