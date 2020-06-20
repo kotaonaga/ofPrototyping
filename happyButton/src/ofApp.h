@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Button.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -23,4 +24,5 @@ class ofApp : public ofBaseApp{
 		
     bool isPushed;
     bool enterPushed;
+    Button button;
 };
