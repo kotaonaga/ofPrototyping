@@ -8,14 +8,18 @@
 #ifndef Shape_hpp
 #define Shape_hpp
 
-#include <stdio.h>
+#include "ofMain.h"
 
 #endif /* Shape_hpp */
 
 class Shape{
 private:
+    float posX;
+    float posY;
+    bool isDrawen;
 public:
     Shape();
+    void setIsDrawen(bool _isDrawen);
     void update();
     void draw();
 };

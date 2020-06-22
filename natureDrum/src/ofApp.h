@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Sound.hpp"
+#include "Shape.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -23,5 +24,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     Sound sound;
+    Shape shape;
 		
 };
